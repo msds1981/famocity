@@ -94,61 +94,6 @@ namespace FamoCity
                      }*/
             //end hisham code cookies login
 
-
-
-            /*
-                        if (!IsPostBack)
-                        {
-                 
-                            //read cookies
-                            if (Request.Cookies["c"] != null)
-                            {
-                                if (Request.Cookies["c"].Value == "true")
-                                {
-                                    chklogin.Checked = true;
-                                    if (Request.Cookies["e"] != null)
-                                        txtlogemail.Text = ClassMain.DecryptParameter(Request.Cookies["e"].Value);
-                                    if (Request.Cookies["u"] != null)
-                                        txtlogpassword.Text = ClassMain.DecryptParameter(Request.Cookies["u"].Value);
-                                    if (Request.Cookies["path"] != null)
-                                        Image1.ImageUrl = Request.Cookies["path"].Value;
-
-                                    if (Session["logout"] == null)
-                                    {
-                                        Login();
-                                        if (Request.Cookies["c"] != null)
-                                            Response.Cookies["path"].Value = ClassMain.getUserLogoPath(Passport, Passport.UserID);
-                                    }
-                                }
-                            }
-
-                            if (Passport.Logged)
-                            {
-                                ClassMain.RedirectPage(Passport);
-                            }
-                            /*
-                            if (Session["Email"] != null && Session["pass"] != null)
-                            {
-
-                                if (Session["Email"] != "" && Session["pass"] != "")
-                                {
-                                    txtlogemail.Text = Session["Email"].ToString();
-                                    txtlogpassword.Text = ClassMain.DecryptParameter(Session["Pass"].ToString());
-                                    Login();
-                                    Session["Email"] = "";
-                                    Session["pass"] = "";
-                                }
-                            }
-                        }
-                        FillYears();
-
-                        try
-                        {
-                            FamOption op = new FamOption(Passport);
-                            int shpAgr = Convert.ToInt32(op.GetValue(FamoLibrary.FamoBlock.Const_Option_Pub_ShopAgree));
-                            hdnAgree.Value = shpAgr.ToString();
-                        }
-                        catch (Exception ex) { hdnAgree.Value = "0"; }*/
         }
 
         protected void btnRigister_Click(object sender, EventArgs e)
