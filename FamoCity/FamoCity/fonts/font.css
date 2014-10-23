@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+		font-family:'HelveticaNeueLTW20-Roman';
+		src: url('../fonts/helveticaneueltarabic55roman.eot');
+		src: url('../fonts/helveticaneueltarabic55roman.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/helveticaneueltarabic55roman.woff') format('woff'),
+			url('../fonts/helveticaneueltarabic55roman.ttf') format('truetype'),
+			url('../fonts/helveticaneueltarabic55roman.svg#helveticaneueltarabic55roman') format('svg');
+				font-weight: normal;
+				font-style: normal;
+		}
+* {font-family:HelveticaNeueLTW20-Roman;}

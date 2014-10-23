@@ -1,0 +1,12 @@
+﻿/*Slideshow*/
+			/* Just some styles to set the page layout. */
+#sliding { padding:4px; margin:0 auto; margin-top:25px; background-color:#FFF;}
+pre {font-family:"Courier New", Courier, monospace;font-size:11px;margin:20px 0 100px 0;border:1px dashed #ddd;padding:10px;background:#f6f6f6;}
+pre.html {margin:10px 0;}
+.clear {clear:both;}
+#thumbs {list-style:none;float:left;}
+#thumbs li {display:inline;}
+#thumbs a {margin-left:5px;float:left;}
+#start {display:none;float:left;}
+#stop {float:left;}
+#slide_show{margin-bottom:70px;margin-top:-70px;}

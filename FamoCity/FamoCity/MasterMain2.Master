@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterMain2.master.cs"
+    Inherits="FamoCity.MasterMain2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FamoCity</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/masterpage1.css" type="text/css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<form id="form1" runat="server">--%>
+    <!--//////////////////////////////////////--header small--////////////////////////////////////////-->
+    <div id="wrapper">
+        <div id="header-small">
+            <div class="hcontent">
+                <div class="logo-small">
+                <a href="http://www.e-smartcities.com"></a>
+                </div>
+            </div>
+        </div>
+        <!--//////////////////////////////////////--content--////////////////////////////////////////-->
+        <div id="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+<div class="ccontent size">
+    <div id="footer">
+        <span>
+            <div class="footer-content">
+               <ul>
+                    <li><a class="footer-li-color" href="/main">الرئيسية</a></li>
+                    <li><a class="footer-li-color" href="#">اتصل بنا</a></li>
+                    <li><a class="footer-li-color" href="#">توظيف</a></li>
+                    <li><a class="footer-li-color" href="/feedback">اقتراحات</a></li>
+                </ul>
+                <p>
+                    جميع حقوق النشر محفوظة ٢٠١٣جميع حقوق النشر محفوظة ٢٠١٣</p>
+            </div>
+        </span>
+    </div></div>
+
+        </div>
+        <!--//////////////////////////////////////--footer--////////////////////////////////////////-->
+        
+    
+
+    </div>
+    <%--</form>--%>
+</body>
+</html>

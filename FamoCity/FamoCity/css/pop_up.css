@@ -1,0 +1,286 @@
+#comments_icons_wrapper{width:970px; background-color:;  margin:0 auto;}
+
+
+#comments{width:420px; background-color:#e7e7e7; border:solid 1px #d3d3d3; float:left; height:340px;}
+
+.comments_glow{width:420px; height:338px; background-color:#e7e7e7; border-top:solid 1px #FFF; border-bottom:solid 1px #FFF;}
+
+.comment_area{ width:326px; height:88px; 
+background: #fefefe; /* Old browsers */
+background: -moz-linear-gradient(top,  #fefefe 0%, #fbfbfb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 0%,#fbfbfb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */
+margin-top:5px; margin-left:5px;
+float:left;
+}
+
+.comment_textarea{ direction:rtl; width:306px; height:68px;  padding:10px; border:solid 1px #cecece; font-family:Tahoma, Geneva, sans-serif; font-weight:bold; color:#cecece; font-size:11px;
+background: #fefefe; /* Old browsers */
+background: -moz-linear-gradient(top,  #fefefe 0%, #fbfbfb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 0%,#fbfbfb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */}
+
+
+.author_picture{float:right; width:78px; height:57px; 
+border:solid 1px #cecece;
+background: #fefefe; /* Old browsers */
+background: -moz-linear-gradient(top,  #fefefe 0%, #fbfbfb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 0%,#fbfbfb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 0%,#fbfbfb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */
+margin-top:5px;
+margin-right:5px;  vertical-align:middle; text-align:center; 
+border-radius: 2px 2px 2px 2px;}
+
+
+.author_picture img{width:70px; height:49px; vertical-align:middle; text-align:center; margin-top:4px;
+border-radius: 2px 2px 2px 2px;}
+
+.send_comment{
+	width:80px; float:right; 
+}
+
+.send_comment_button{ width:80px; height:30px; margin-right:5px; float:right; background:#f1f1f1; border:solid 1px #c9c9c9; font-family:Tahoma, Geneva, sans-serif; font-size:10px; font-weight:bold; color:#c192b9; margin-top:1px; text-shadow:1px 1px 0px #FFF;}
+
+
+.add_comment_title{ direction:rtl; text-align:right; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:bold; color:#c192b9; margin-top:5px; text-shadow:1px 1px 0px #FFF; margin-right:15px;}
+
+
+.show_comments{ width:407px; padding-bottom:18px; padding-top:10px; background-color:#FFF; margin:5px 0px 0px 5px; border-top:solid 1px #c9c9c9;
+border-right:solid 1px #c9c9c9;
+border-left:solid 1px #c9c9c9; }
+
+
+.show_comments .comment{ list-style-type:none; direction:rtl; text-align:right; }
+.comment_content {width:315px; }
+.clr{ clear:both;}
+
+.comment_all{ overflow:auto; width:407px; height:190px; overflow-x:hidden; overflow-y:scroll;}
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px #98448b; 
+    border-radius: 20px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 1px #723e6a; 
+}
+
+.author_name{font-weight:bold; color:#c891be; float:right;}
+
+.comment_content{ float:left; font-family:Tahoma, Geneva, sans-serif; font-size:11px; color:#a6a6a6; width:310px;}
+.comment_photo{float:right; width:58px; height:50px;}
+.comment_photo img{ width:50px; height:45px; vertical-align:middle; margin-top:5px; margin-right:5px;
+border-radius: 5px 5px 5px 5px;}
+.seperated_comment {border-bottom:solid 1px #eeeeee; overflow:hidden; padding-bottom:5px; padding-right:10px;}
+.comment_time{ color:#92af4b; font-family:Tahoma, Geneva, sans-serif; font-size:10px; direction:rtl; text-align:right; margin-top:4px; }
+
+
+.more_comments{ direction:rtl; text-align:center;}
+.more_comments a{ color:#3c3c3c; font-size:10px; font-weight:bold;}
+
+
+.author_comment{ margin-top:4px; min-height:58px; vertical-align:middle; }
+.comment_option{width:307px; height:20px;}
+.comment_option img{vertical-align:top; position:relative; top:2px; left:-4px; border:0;}
+
+#icons_right{float:right; width:540px; background:; }
+
+
+
+
+
+.like_and_unlike ul{ list-style-type:none;}
+
+.like_and_unlike ul li{float:right; direction:rtl; width:70px; margin-left:3px; margin-right:3px;
+height:16px;
+	padding: 10px 8px;
+	background: -moz-linear-gradient(
+		top,
+		#f2f2f2 0%,
+		#f2f2f2 12%,
+		#f2f2f2 2%,
+		#e1e1e1 54%,
+		#f6f6f6);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#f2f2f2),
+		color-stop(0.12, #f2f2f2),
+		color-stop(0.2, #f2f2f2),
+		color-stop(0.54, #e1e1e1),
+		to(#f6f6f6));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #d0d0d0;
+	-moz-box-shadow:
+		0px 0px 0px rgba(255,255,255,1),
+		inset -5px -5px 10px rgba(225,225,225,1);
+	-webkit-box-shadow:
+		0px 0px 0px rgba(255,255,255,1),
+		inset -5px -5px 10px rgba(225,225,225,1);
+	box-shadow:
+		0px 0px 0px rgba(255,255,255,1),
+		inset -5px -5px 10px rgba(225,225,225,1);
+	text-shadow:
+		0px 1px 0px #FFF ;
+		font-size:10px;
+		font-family:tahoma; text-align:center; font-weight:bold;
+}
+
+.like_and_unlike ul li span{ float:right; vertical-align:middle;}
+
+
+.like_and_unlike a{color:#000; text-decoration:none;}
+
+
+
+
+
+
+
+
+.product_info{ direction:rtl; text-align:right; margin-top:10px; color:#000;}
+.product_info ul{list-style-type:none; width:535px; margin-right:3px;}
+.product_info ul li{list-style-type:none; width:530px; font-size:12px; font-weight:bold; height:35px; text-shadow:
+		0px 1px 0px #FFF ;}
+.product_info ul span{width:430px; background:; color:#c283b8; padding-right:10px; text-shadow:
+		0px 1px 0px #FFF ;}
+
+
+.desc{ background-color:#fff; width:500px; min-height:150px !important; padding-right:10px; padding-left:10px;
+margin-top:7px; padding-top:15px; border:solid 1px #dddddd; color:#8a8a8a;}
+
+
+
+
+
+
+
+
+
+
+
+/*drop down*/
+
+
+
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+
+#colorNav{width:30px; position:; z-index:; float:left;}
+#colorNav > ul{
+	width:20px; /* Increase when adding more menu items */
+	margin:0 auto;
+}
+
+#colorNav > ul > li{ /* will style only the top level li */
+	list-style: none;
+	box-shadow: ;
+	display: inline-block;
+	line-height: 1;
+	margin: 1px;
+	border-radius: 3px;
+	position:relative;
+}
+
+#colorNav > ul > li > a{
+	color:inherit;
+	text-decoration:none !important;
+	font-size:24px;
+	padding: 0px;
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:120px;
+	left:50%;
+	margin-left:-7px;
+	top:0px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+	
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	
+	-webkit-transition:max-height 0.4s linear;
+	-moz-transition:max-height 0.4s linear;
+	transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+	padding:3px;
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:25px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:47%;
+	top:-10px;
+	margin-left:-52px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	max-height:200px; /* Increase when adding more dropdown items */
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+
+
+#colorNav li.purple{	background-color:#FFF;color:#9f3c85; width:21px; height:15px;}
+

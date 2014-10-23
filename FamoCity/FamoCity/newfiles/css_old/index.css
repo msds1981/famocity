@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+
+
+@font-face {
+		font-family:'Droid';
+		src: url('../fonts/344604493-DroidKufi-Regular.eot');
+		src: url('../fonts/344604493-DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/344604493-DroidKufi-Regular.woff') format('woff'),
+			url('../fonts/344604493-DroidKufi-Regular.ttf') format('truetype'),
+			url('../fonts/344604493-DroidKufi-Regular.svg#344604493-DroidKufi-Regular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+		}
+* {font-family:Droid; font-size:11px;}
+input{font-family:Droid; font-size:11px; font-weight:normal;}
+
+
+
+
+
+
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}

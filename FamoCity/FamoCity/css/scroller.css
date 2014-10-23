@@ -1,0 +1,19 @@
+		.content{ width:96%; background:; min-height:50px; max-height:200px;  margin:0 auto; overflow:auto;   margin-top:-1px;}
+		.content p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
+		.content p:nth-child(3n+0){color:#c96;}
+		
+		
+		
+		.contentt{ width:96%; background:; min-height:50px; max-height:200px;  margin:0 auto; overflow:auto;   margin-top:20px;}
+		.contentt p:nth-child(even){color:#FFF; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:normal;}
+		.contentt p:nth-child(3n+0){color:#c96;}
+		
+				
+		.content3{ width:100%; background:; min-height:50px; max-height:200px;  margin:0 auto; overflow:auto;   margin-top:px;}
+		.content3 p:nth-child(even){color:#FFF; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:normal;}
+		.content3 p:nth-child(3n+0){color:#c96;}
+		
+		
+		.content4{ width:100%; background:; min-height:50px; max-height:200px;  margin:0 auto; overflow:auto;   margin-top:px;}
+		.content4 p:nth-child(even){color:#FFF; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:normal;}
+		.content4 p:nth-child(3n+0){color:#c96;}

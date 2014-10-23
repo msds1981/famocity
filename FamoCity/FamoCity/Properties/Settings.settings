@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FamoCity.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FamoCity_NopService_NopService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc</Value>
+    </Setting>
+    <Setting Name="FamoCity_PersonalService_FamoPersonalService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.famocity.com/FamoPersonalService/FamoPersonalService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

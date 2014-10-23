@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegisterNewUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Gender" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterNewUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterNewUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Customerid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tops" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFriendsRequestsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequestsSeeMore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Customerid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="linkid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tops" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequestsSeeMoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFriendsRequestsSeeMoreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequestsCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Customerid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFriendsRequestsCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFriendsRequestsCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Customerid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCustomerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Customerid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCustomerInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AccetpFriendShip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="linkid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccetpFriendShipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccetpFriendShipResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelFriendShip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="linkid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelFriendShipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelFriendShipResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastNotificationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerLinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseNotificationCounter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="other_userid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseNotificationCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncreaseNotificationCounterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotificationsCountZero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotificationsCountZeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotificationsCountZeroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotificationCounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="admEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotificationCountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNotificationCountsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterNewUserSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterNewUser" />
+  </wsdl:message>
+  <wsdl:message name="RegisterNewUserSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequests" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsSeeMoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequestsSeeMore" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsSeeMoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequestsSeeMoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequestsCount" />
+  </wsdl:message>
+  <wsdl:message name="GetFriendsRequestsCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFriendsRequestsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCustomerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveCustomerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccetpFriendShipSoapIn">
+    <wsdl:part name="parameters" element="tns:AccetpFriendShip" />
+  </wsdl:message>
+  <wsdl:message name="AccetpFriendShipSoapOut">
+    <wsdl:part name="parameters" element="tns:AccetpFriendShipResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelFriendShipSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelFriendShip" />
+  </wsdl:message>
+  <wsdl:message name="CancelFriendShipSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelFriendShipResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerLink" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseNotificationCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:IncreaseNotificationCounter" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseNotificationCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:IncreaseNotificationCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotificationsCountZeroSoapIn">
+    <wsdl:part name="parameters" element="tns:NotificationsCountZero" />
+  </wsdl:message>
+  <wsdl:message name="NotificationsCountZeroSoapOut">
+    <wsdl:part name="parameters" element="tns:NotificationsCountZeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNotificationCountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotificationCounts" />
+  </wsdl:message>
+  <wsdl:message name="GetNotificationCountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNotificationCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FamoPersonalServiceSoap">
+    <wsdl:operation name="RegisterNewUser">
+      <wsdl:input message="tns:RegisterNewUserSoapIn" />
+      <wsdl:output message="tns:RegisterNewUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequests">
+      <wsdl:input message="tns:GetFriendsRequestsSoapIn" />
+      <wsdl:output message="tns:GetFriendsRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsSeeMore">
+      <wsdl:input message="tns:GetFriendsRequestsSeeMoreSoapIn" />
+      <wsdl:output message="tns:GetFriendsRequestsSeeMoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsCount">
+      <wsdl:input message="tns:GetFriendsRequestsCountSoapIn" />
+      <wsdl:output message="tns:GetFriendsRequestsCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData">
+      <wsdl:input message="tns:GetCustomerDataSoapIn" />
+      <wsdl:output message="tns:GetCustomerDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerInfo">
+      <wsdl:input message="tns:SaveCustomerInfoSoapIn" />
+      <wsdl:output message="tns:SaveCustomerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccetpFriendShip">
+      <wsdl:input message="tns:AccetpFriendShipSoapIn" />
+      <wsdl:output message="tns:AccetpFriendShipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelFriendShip">
+      <wsdl:input message="tns:CancelFriendShipSoapIn" />
+      <wsdl:output message="tns:CancelFriendShipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNotifications">
+      <wsdl:input message="tns:GetLastNotificationsSoapIn" />
+      <wsdl:output message="tns:GetLastNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerLink">
+      <wsdl:input message="tns:GetCustomerLinkSoapIn" />
+      <wsdl:output message="tns:GetCustomerLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseNotificationCounter">
+      <wsdl:input message="tns:IncreaseNotificationCounterSoapIn" />
+      <wsdl:output message="tns:IncreaseNotificationCounterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationsCountZero">
+      <wsdl:input message="tns:NotificationsCountZeroSoapIn" />
+      <wsdl:output message="tns:NotificationsCountZeroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationCounts">
+      <wsdl:input message="tns:GetNotificationCountsSoapIn" />
+      <wsdl:output message="tns:GetNotificationCountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FamoPersonalServiceSoap" type="tns:FamoPersonalServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUser">
+      <soap:operation soapAction="http://tempuri.org/RegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequests">
+      <soap:operation soapAction="http://tempuri.org/GetFriendsRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsSeeMore">
+      <soap:operation soapAction="http://tempuri.org/GetFriendsRequestsSeeMore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsCount">
+      <soap:operation soapAction="http://tempuri.org/GetFriendsRequestsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccetpFriendShip">
+      <soap:operation soapAction="http://tempuri.org/AccetpFriendShip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelFriendShip">
+      <soap:operation soapAction="http://tempuri.org/CancelFriendShip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNotifications">
+      <soap:operation soapAction="http://tempuri.org/GetLastNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerLink">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseNotificationCounter">
+      <soap:operation soapAction="http://tempuri.org/IncreaseNotificationCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationsCountZero">
+      <soap:operation soapAction="http://tempuri.org/NotificationsCountZero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationCounts">
+      <soap:operation soapAction="http://tempuri.org/GetNotificationCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FamoPersonalServiceSoap12" type="tns:FamoPersonalServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUser">
+      <soap12:operation soapAction="http://tempuri.org/RegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequests">
+      <soap12:operation soapAction="http://tempuri.org/GetFriendsRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsSeeMore">
+      <soap12:operation soapAction="http://tempuri.org/GetFriendsRequestsSeeMore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendsRequestsCount">
+      <soap12:operation soapAction="http://tempuri.org/GetFriendsRequestsCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccetpFriendShip">
+      <soap12:operation soapAction="http://tempuri.org/AccetpFriendShip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelFriendShip">
+      <soap12:operation soapAction="http://tempuri.org/CancelFriendShip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNotifications">
+      <soap12:operation soapAction="http://tempuri.org/GetLastNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerLink">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseNotificationCounter">
+      <soap12:operation soapAction="http://tempuri.org/IncreaseNotificationCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationsCountZero">
+      <soap12:operation soapAction="http://tempuri.org/NotificationsCountZero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationCounts">
+      <soap12:operation soapAction="http://tempuri.org/GetNotificationCounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FamoPersonalService">
+    <wsdl:port name="FamoPersonalServiceSoap" binding="tns:FamoPersonalServiceSoap">
+      <soap:address location="http://www.famocity.com/FamoPersonalService/FamoPersonalService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FamoPersonalServiceSoap12" binding="tns:FamoPersonalServiceSoap12">
+      <soap12:address location="http://www.famocity.com/FamoPersonalService/FamoPersonalService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

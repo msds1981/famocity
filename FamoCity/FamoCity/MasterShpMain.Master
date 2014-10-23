@@ -1,0 +1,541 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterShpMain.master.cs"
+    Inherits="FamoCity.MasterShpMain" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Famo City</title>
+    <link href="/css/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="/css/Untitled-9.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/scroller.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="/js/libs/jquery.js" type="text/javascript"></script>
+    <script src="/js/noti.js" type="text/javascript"></script>
+    <script src="/js/scroller.js" type="text/javascript"></script>
+    <script src="/js/nav.js" type="text/javascript"></script>
+    <script src="/js/respond.min.js"></script>
+    <%--    <script src="/js/jquery.watermark.js" type="text/javascript"></script>
+    --%>
+    <!-- Gallery Slideshow Jquery -->
+    <%--<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>--%>
+    <!-- Jquery Sliding Panel -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btn-slide").click(function () {
+                $("#user_information").slideToggle("slow");
+                $(this).toggleClass("active"); return false;
+            });
+
+            var s = $("#navbar");
+            var pos = s.position();
+            $(window).scroll(function () {
+                var newhe = 0;
+                var windowpos = $(window).scrollTop();
+                //s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);			
+                if ($(".btn-slide").hasClass('active')) newhe = $("#user_information").height(); else newhe = 0;
+                if (windowpos >= pos.top + newhe) {
+                    s.addClass("stick");
+                } else {
+                    s.removeClass("stick");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function redirectToLogin() {
+            var userName = document.getElementById("username").value; // encrypt(document.getElementById("username").value);
+            var passwd = document.getElementById("password").value;
+            window.location = '/Login';
+            $.ajax({
+                type: "POST",
+                url: 'Methods.aspx/SetSession',
+                data: "{'username':'" + userName + "','password':'" + passwd + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    window.location = '/Login';
+                },
+                error: AjaxFailed
+
+            });
+
+            /* if (fireAjax("Methods.aspx/SetSession", "{'username':'" + userName + "','password':'" + passwd + "'}") == 1) {
+            alert("");
+            }*/
+
+        }
+        function AjaxFailed(result) {
+            alert(result.status + ' ' + result.statusText);
+        }
+
+    </script>
+    <%--    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#username').watermark('اسم المستخدم');
+            $('#password').watermark('كلمة المرور');
+
+        });
+    </script>
+    --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--  <form id="form1" runat="server">--%>
+    <!-- USER INFORMATION START -->
+    <div id="user_information">
+        <asp:Literal ID="ltrLinkList" runat="server"></asp:Literal>
+        <%--        <div class="gridContainer clearfix">
+            <ul id="user_info_list">
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+                <li><a href="#">تعديل المعلومات <span>
+                    <img src="images/user_info_icon.png" alt="" title="" />
+                </span></a></li>
+            </ul>
+        </div>--%>
+        <!-- USER INFORMATION END -->
+    </div>
+    <!-- BAR WRAPPER START -->
+    <asp:Literal ID="ltrBarWrapper" runat="server"></asp:Literal>
+    <%--   <div id="bar_wrapper">
+        <div class="gridContainer clearfix">
+            <div class="slide">
+                <a href="#" class="btn-slide">بياناتك الشخصية</a></div>
+        </div>
+        <!-- BAR WRAPPER END -->
+    </div>--%>
+    <!-- HEADER START -->
+    <div id="header">
+        <div class="gridContainer clearfix">
+            <asp:Literal ID="ltrUserInfo" runat="server"></asp:Literal>
+            <!--test-->
+            <!--endtest-->
+            <!-- User Data Start -->
+            <%-- <div id="user_data">
+                <div class="user_nickname">
+                    محمد مصطفي
+                </div>
+                <div class="user_picture">
+                    <img class="user_picture2" src="images/user_pic.png" alt="" title="" />
+                </div>
+                <div class="change_picture">
+                    <a href="#" class="orange-btn bg">غير صورتك</a>
+                </div>
+                <div class="user_status">
+                    <div class="status">
+                        نعلم مدى أهمية بياناتك و محتويات موقعك، لذلك نضمن لك عدم فقدانها بتوفير نسخ إحتياطي
+                        آمن يومي ، أسبوعي ،شهرى .
+                    </div>
+                </div>
+                <!-- User Data End -->
+            </div>--%>
+            <!-- User Login Start -->
+            <%--            <div id="user_login">
+                <form action="#" method="post" class="user_login">
+                <div class="login">
+                    <ul>
+                        <li class="">
+                            <input type="button" name="submit" value="دخول" class="orange-btn bg user_submit"
+                                onclick="redirectToLogin()" /></li>
+                        <li class="password">
+                            <input type="password" name="password" value="password" id="password" /></li>
+                        <li class="lock">
+                            <div class="lock_border">
+                                <img src="images/lock.png" /></div>
+                        </li>
+                        <li class="username">
+                            <input type="text" name="username" id="username" value="اسم المستخدم" /></li>
+                    </ul>
+                </div>
+                </form>
+                <div id="forget">
+                    <ul class="forget">
+                        <li><a href="#">تسجيل عضوية جديدة ؟</a></li>
+                        <li class="forgetli"><a href="#">هل نسيت كلمة المرور ؟</a> </li>
+                    </ul>
+                </div>
+            </div>--%>
+            <!-- Logo Start-->
+            <div id="logo">
+                <img src="/images/logo.png" />
+                <!-- Logo End-->
+            </div>
+        </div>
+        <!-- HEADER END -->
+    </div>
+    <!-- NAVBAR START -->
+    <div id="navbar">
+        <div class="gridContainer clearfix">
+            <!-- Notification Start-->
+            <%--<div id="notification">
+                <ul id="notify_list">
+                    <li id="shopping"><a href="javascript:void(0)" id="lst_shop" class="notif">
+                        <img src="/images/shopping.png" />
+                        <span class="pink">99</span> </a></li>
+                    <li id="inbox"><a href="javascript:void(0)" id="lst_inbox" class="notif">
+                        <img src="/images/inbox.png" />
+                        <span class="pink">5</span> </a></li>
+                    <li id="friend"><a href="javascript:void(0)" id="lst_frnd" class="notif">
+                        <img src="/images/friend.png" />
+                        <span class="pink">9</span> </a></li>
+                </ul>
+                <!-- Notification End-->
+            </div>--%>
+            <!-- Search Start-->
+            <div id="search">
+                <ul class="search_list">
+                    <%--<li><a href="#" class="orange-btn bg">ابحث</a></li>
+                    <li>
+                        <input type="text" name="search_box" class="search_box" value="كلمة البحث" /></li>
+                --%>
+                </ul>
+                <!-- Search End-->
+            </div>
+            <div id="menu">
+                <!-- Menu Start -->
+                <ul id="navigator">
+                    <li>
+                        <asp:HyperLink ID="lnkMain" runat="server">الصفحة الرئيسية</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="lnkProducts" runat="server">المنتجات</asp:HyperLink></li>
+                    <%--<li><a href="#">آخر الأخبار</a></li>
+                    <li><a href="#">العروض الترويجية</a></li>
+                    <li><a href="#">المتابعين</a></li>--%>
+                    
+                </ul>
+            </div>
+            <!-- Menu End -->
+            <%--<div class="all_noty">
+                <!-- Notification show start -->
+                <!-- SHOPPING LIST START -->
+                <div id="shopping_list" class="notifBox lst_shop">
+                    <div class="arrow_define">
+                        <img src="/images/defined_arrow.png" /></div>
+                    <!-- DIV ONE START -->
+                    <div class="shopping_one">
+                        <div class="sub">
+                            <!-- -->
+                            <div class="sub_title">
+                                سلة الشراء
+                            </div>
+                            <div id="content_4" class="content4">
+                                <div id="alerts_3">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            <div class="product_total">
+                                                4
+                                            </div>
+                                            <div class="product_div">
+                                                <div class="product_name">
+                                                    اسم المنتج
+                                                </div>
+                                                <p>
+                                                    سعر المنتج
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="notification_pic_msg" src="/images/amr_diab.png" />
+                                </div>
+                                <div id="alerts_3">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            <div class="product_total">
+                                                4
+                                            </div>
+                                            <div class="product_div">
+                                                <div class="product_name">
+                                                    اسم المنتج
+                                                </div>
+                                                <p>
+                                                    سعر المنتج
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="/images/amr_diab.png" class="notification_pic_msg" />
+                                </div>
+                                <div id="alerts_3">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            <div class="product_total">
+                                                4
+                                            </div>
+                                            <div class="product_div">
+                                                <div class="product_name">
+                                                    اسم المنتج
+                                                </div>
+                                                <p>
+                                                    سعر المنتج
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="/images/amr_diab.png" class="notification_pic_msg" />
+                                </div>
+                            </div>
+                        </div>
+                        <!--DIV ONE END -->
+                    </div>
+                    <div class="total">
+                        <div class="priceandamount">
+                            <div class="price_title">
+                                السعر</div>
+                            <div class="price">
+                                495$</div>
+                        </div>
+                        <div class="clr">
+                        </div>
+                        <div class="amount">
+                            <div class="price_title">
+                                الكمية</div>
+                            <div class="price">
+                                10</div>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div class="total">
+                        <a href="#">شراء</a>
+                    </div>
+                    <br />
+                    <!-- -->
+                    <!-- SHOPPING LIST END -->
+                </div>
+                <!-- INBOX LIST START -->
+                <div id="inbox_list" class="notifBox lst_inbox">
+                    <div class="arrow_define_2">
+                        <img src="/images/defined_arrow.png" /></div>
+                    <ul class="sub">
+                        <!-- -->
+                        <!-- DIV ONE START -->
+                        <div class="msg_one">
+                            <!-- -->
+                            <div id="sub_title">
+                                <div class="sub_title">
+                                    الرسائل
+                                </div>
+                                <div id="content_3" class="content3">
+                                    <div id="alerts_2">
+                                        <div class="notification_text">
+                                            <div class="request_name2">
+                                                أدهم الشرقاوى
+                                                <p>
+                                                    تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف ايه اللى هيحصل
+                                                    لأن حال البلد تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف
+                                                    ايه اللى هيحصل لأن حال البلد
+                                                </p>
+                                                <p>
+                                                    قبل ساعتين</p>
+                                            </div>
+                                        </div>
+                                        <img class="notification_pic_msg" src="/images/amr_diab.png" />
+                                    </div>
+                                    <div id="alerts_2">
+                                        <div class="notification_text">
+                                            <div class="request_name2">
+                                                أدهم الشرقاوى
+                                                <p>
+                                                    تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف ايه اللى هيحصل
+                                                    لأن حال البلد تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف
+                                                    ايه اللى هيحصل لأن حال البلد
+                                                </p>
+                                                <p>
+                                                    قبل ساعتين</p>
+                                            </div>
+                                        </div>
+                                        <img class="notification_pic_msg" src="/images/amr_diab.png" />
+                                    </div>
+                                    <div id="alerts_2">
+                                        <div class="notification_text">
+                                            <div class="request_name2">
+                                                أدهم الشرقاوى
+                                                <p>
+                                                    تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف ايه اللى هيحصل
+                                                    لأن حال البلد تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف
+                                                    ايه اللى هيحصل لأن حال البلد
+                                                </p>
+                                                <p>
+                                                    قبل ساعتين</p>
+                                            </div>
+                                        </div>
+                                        <img class="notification_pic_msg" src="/images/amr_diab.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <!--DIV ONE END -->
+                        </div>
+                        <!-- -->
+                    </ul>
+                    <div class="read_more">
+                        <a href="#">قراءة المزيد</a>
+                    </div>
+                    <!-- INBOX LIST END -->
+                </div>
+                <!-- FRIEND LIST START -->
+                <div id="friend_list" class="notifBox lst_frnd">
+                    <div class="arrow_define_3">
+                        <img src="/images/defined_arrow.png" /></div>
+                    <!-- DIV ONE START -->
+                    <div class="one">
+                        <!-- -->
+                        <div id="sub_title">
+                            <div class="sub_title">
+                                طلبات الصداقة
+                            </div>
+                            <div id="content_1" class="content">
+                                <div id="friend_request_all">
+                                    <div id="friend_request_li">
+                                        <div class="request_buttons">
+                                            <a class="confirm" href="#">قبــول</a> <span><a class="refuse" href="#">رفــض</a></span></div>
+                                        <div class="request_name">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                قبل عشره اعوام</p>
+                                        </div>
+                                        <img class="notification_pic_msg" src="images/amr_diab.png" />
+                                    </div>
+                                    <div id="friend_request_li">
+                                        <div class="request_buttons">
+                                            <a class="confirm" href="#">قبــول</a> <span><a class="refuse" href="#">رفــض</a></span></div>
+                                        <div class="request_name">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                قبل خمس ساعات</p>
+                                        </div>
+                                        <img class="notification_pic_msg" src="images/amr_diab.png" />
+                                    </div>
+                                    <div id="friend_request_li">
+                                        <div class="request_buttons">
+                                            <a class="confirm" href="#">قبــول</a> <span><a class="refuse" href="#">رفــض</a></span></div>
+                                        <div class="request_name">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                قبل ساعتين</p>
+                                        </div>
+                                        <img class="notification_pic_msg" src="images/amr_diab.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <!--DIV ONE END -->
+                    </div>
+                    <div class="read_more">
+                        <a href="#">قراءة المزيد</a>
+                    </div>
+                    <!-- DIV TWO START -->
+                    <div class="two">
+                        <div id="sub_title">
+                            <div class="sub_title">
+                                التنبيهات</div>
+                        </div>
+                        <div id="content_2" class="contentt">
+                            <ul id="friend_request_all">
+                                <div id="alerts">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف ايه اللى هيحصل
+                                                لأن حال البلد تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف
+                                                ايه اللى هيحصل لأن حال البلد
+                                            </p>
+                                            <p>
+                                                قبل ساعتين</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification_pic">
+                                        <img src="images/amr_diab.png" />
+                                    </div>
+                                </div>
+                                <div id="alerts">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ قليل وبكرة هنشوف ايه اللى هيحصل
+                                                لأن حال البلد
+                                            </p>
+                                            <p>
+                                                قبل ساعتين</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification_pic">
+                                        <img src="images/amr_diab.png" />
+                                    </div>
+                                </div>
+                                <div id="alerts">
+                                    <div class="notification_text">
+                                        <div class="request_name2">
+                                            أدهم الشرقاوى
+                                            <p>
+                                                تمت زيارة بروفايلك من قبل شركة او لحركة حماس منذ</p>
+                                            <p>
+                                                قبل اتنين اسبوع</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification_pic">
+                                        <img src="images/amr_diab.png" />
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="read_more">
+                            <a href="#">قراءة المزيد</a>
+                        </div>
+                        <!-- DIV TWO END -->
+                    </div>
+                    <!-- FRIEND LIST END -->
+                </div>
+                <!-- Notification show end -->
+            </div>--%>
+        </div>
+        <!-- NAVBAR END -->
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <div id="footer">
+        <span>
+            <div class="footer-content">
+               <ul>
+                    <li><a class="footer-li-color" href="/main">الرئيسية</a></li>
+                    <li><a class="footer-li-color" href="#">اتصل بنا</a></li>
+                    <li><a class="footer-li-color" href="#">توظيف</a></li>
+                    <li><a class="footer-li-color" href="/feedback">اقتراحات</a></li>
+                </ul>
+                <p>
+                    جميع حقوق النشر محفوظة ٢٠١٣جميع حقوق النشر محفوظة ٢٠١٣</p>
+            </div>
+        </span>
+    </div>
+    
+    <%--<div id="footer">
+    </div>--%>
+    <%-- </form>--%>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+</body>
+</html>

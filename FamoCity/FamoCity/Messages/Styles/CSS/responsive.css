@@ -1,0 +1,290 @@
+@media (max-width: 1024px) {
+	.page-messages {
+		width: auto !important;
+		max-width: 719px !important;
+		position: relative;
+	}
+    	section.page-messages .openMessages {
+    		display: block;
+    	}
+		.page-messages .ps-box-messages {
+			display: none;
+			position: absolute;
+			z-index: 999;
+		}
+
+		.page-messages .ps-box-content {
+			border: 1px solid #E0E0DF !important;
+		}
+}
+@media (max-width: 760px) {
+	section.page-messages {
+		width: 502px !important;
+		padding: 0 20px !important;
+	}
+		section.page-messages .ps-box-content {
+			border: 1px solid #E0E0DF !important;
+			width: 500px !important;
+		}
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .avatar {
+                    border: 3px solid #E5E5E5;
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .avatar img {
+                        border: 1px solid #ffffff;
+                        width: 48px;
+                        height: 48px;
+                    }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .text {
+                	font-size: 14px;
+                    width: auto;
+                    /*min-height: 50px;*/
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .text span {
+                        margin-top: 8px;
+                        margin-bottom: -30px;
+                    }
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .avatar {
+                    border: 3px solid #E5E5E5;
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .avatar img {
+                        border: 1px solid #ffffff;
+                        width: 48px;
+                        height: 48px;
+                    }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .text {
+                	font-size: 14px;
+                    width: 370px;
+                    /*min-height: 50px;*/
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .text span {
+                        margin-top: 8px;
+                        margin-bottom: -30px;
+                        margin-right: 382px;
+                    }
+        section.page-messages .ps-box-content .ps-bc-input {
+            height: 40px;
+        }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit {
+                width: 55px;
+                height: 40px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit-arrow {
+                width: 8px;
+                height: 20px;
+                margin-top: 9px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text {
+                width: 360px;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text textarea {
+                    width: 330px;
+                }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools {
+                width: 58px;
+                height: 24px;
+                padding: 8px 3px 6px;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .up-photo {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-photo-upload {
+                    background: #ffffff;
+                    border-top: 1px solid #E5E5E5;
+                    width: 500px;
+                    height: 100px;
+                    position: absolute;
+                    bottom: 61px;
+                    right: 0px;
+                    text-align: center;
+                }
+                    section.page-messages .ps-box-content .ps-bc-input .ps-photo-upload .ps-pu-box {
+                        background-color: #f1f1f1;
+                        background-size: 70px 70px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border: 1px solid #E5E5E5;
+                        width: 70px;
+                        height: 70px;
+                        padding: 4px;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji-box {
+                    width: 500px;
+                    right: -426px;
+                }
+}
+@media (max-width: 550px) {
+	section.page-messages {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+		section.page-messages .ps-box-content {
+			border: 1px solid #E0E0DF !important;
+			border-left: 0px solid #E0E0DF !important;
+			border-right: 0px solid #E0E0DF !important;
+			width: 100% !important;
+		}
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .avatar {
+                    border: 3px solid #E5E5E5;
+                    display: none;
+                }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .text {
+                	font-size: 12px;
+                    width: 95%;
+                    /*min-height: 50px;*/
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .text span {
+                        margin-top: 8px;
+                        margin-bottom: -30px;
+                    }
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he {
+					position: relative;
+                }
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .avatar {
+                    border: 3px solid #E5E5E5;
+                    position: absolute;
+                    left: 15px;
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .avatar img {
+                        border: 1px solid #ffffff;
+                        width: 32px;
+                        height: 32px;
+                    }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .text {
+                	font-size: 12px;
+                    width: 94%;
+                    /*min-height: 50px;*/
+                    padding-bottom: 20px;
+                }
+                    section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .text span {
+                        margin-top: 8px;
+                        margin-bottom: -30px;
+                        margin-right: auto;
+                        margin-left: -22px;
+                    }
+        section.page-messages .ps-box-content .ps-bc-input {
+            height: 40px;
+        }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit {
+            	background-size: 18px;
+                width: 10%;
+                height: 40px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit-arrow {
+                width: 8px;
+                height: 20px;
+                margin-top: 9px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text {
+                width: 75%;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text textarea {
+                    width: 88%;
+                }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools {
+                width: 13%;
+                height: 24px;
+                padding: 8px 3px 6px;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .up-photo {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                    margin-left: 5px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-photo-upload {
+                    background: #ffffff;
+                    border-top: 1px solid #E5E5E5;
+                    width: 100%;
+                    height: 100px;
+                    position: absolute;
+                    bottom: 61px;
+                    right: 0px;
+                    text-align: center;
+                }
+                    section.page-messages .ps-box-content .ps-bc-input .ps-photo-upload .ps-pu-box {
+                        background-color: #f1f1f1;
+                        background-size: 70px 70px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border: 1px solid #E5E5E5;
+                        width: 70px;
+                        height: 70px;
+                        padding: 4px;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji-box {
+                    width: 300px;
+                    right: -240px;
+                }
+}
+@media (max-width: 400px) {
+				section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .avatar {
+                    left: -6px;
+                    top:0px;
+                }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-self .text {
+                	font-size: 12px;
+                    width: 77%;
+                    /*min-height: 50px;*/
+                }
+                section.page-messages .ps-box-content .ps-bc-messages .ps-bc-m-he .text {
+                	font-size: 12px;
+                    width: 77%;
+                    /*min-height: 50px;*/
+                }
+        section.page-messages .ps-box-content .ps-bc-input {
+            height: 40px;
+        }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit {
+            	background-size: 18px;
+                width: 12%;
+                height: 40px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-submit-arrow {
+                width: 8px;
+                height: 20px;
+                margin-top: 9px;
+            }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text {
+                width: 70%;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-text textarea {
+                    width: 85%;
+                }
+            section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools {
+                width: 15%;
+                height: 24px;
+                padding: 8px 3px 6px;
+            }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .up-photo {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                    margin-left: 2px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji {
+                    background-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                }
+                section.page-messages .ps-box-content .ps-bc-input .ps-bc-input-tools .emoji-box {
+                    width: 300px;
+                    right: -243px;
+                }
+
+}

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* CSS Document */
+/*/////////////////////////////////////////____content size____/////////////////////////////////////////
+.size{ min-height:622px;}*/
+/*/////////////////////////////////////////____content data____/////////////////////////////////////////*/
+.rbox{ float:right; width:448px;/* height:434px;*/ margin-left:98px; margin-top:51px;}
+.rbox p{ font-size:12px; text-align:right; color:#6d4373; margin-bottom:50px; font-family:armedium; line-height:19px;}
+.video{ width:446px; height:250px; z-index:2; position:relative; margin-left:33px;}
+.lbox{ float:right; width:370px; margin-top:51px;}
+.videoshadow{ width:511px; height:305px; background:url(../images/box%20shado.png); /* top:314px; right:-8px; position:absolute;*/ margin-left:-31px; z-index:1;
+               background-repeat:no-repeat; background-position:0 89px;
+              }
+
+
+
+
+
+/*/////////////////////////////////////////____login____/////////////////////////////////////////*/
+.form-container {
+   text-decoration: none;
+   width:370px;
+   padding:30px 0 0 0;
+   }
+.form-field {
+   border: none;
+   background: #eeeeee;
+   padding:2px 2px 3px 2px;
+   margin-bottom:5px;
+   width:132px;
+   height:17px;
+   outline:none;
+   float:right;
+   text-align:right;
+   font-size:10px;
+   color: #a58fa6;
+   font-style:italic;
+   line-height:23px;
+   }
+.form-field:hover {
+   background: #ffffff;
+   font-style:italic;
+   }
+.form-field:focus {
+   background: #ffffff;
+   color: #a58fa6;
+   font-style: normal;
+	font-weight: normal;
+   }
+.form-line{ float:right; width:156px;}
+.form-line span{ font-size:24px; color:Red; float:right; margin-right:3px; line-height:27px;}
+
+.form-title {
+   margin-bottom:5px;
+   color: #ffffff;
+   float:right;
+   font-size:12px;
+   }
+.form-container a:link{ margin-top:20px;}
+.form-label{float:right; width:156px; height:20px; font-size:9px; color:#ffffff; text-align:right; direction:rtl; vertical-align:top;}
+.form-label a:link {color: #f2f2f2; text-decoration: none;} 
+.form-label a:visited {color: #ffffff; text-decoration: none;}
+.form-label a:active {color: #ffffff; text-decoration:underline;}
+.form-label a:hover {color: #ffffff; text-decoration:underline;}
+.form-label input{ margin:0;}
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////////////////////____register____/////////////////////////////////////////*/
+.form-register {
+   text-decoration: none;
+   width:370px;
+   padding:30px 0 0 0;
+   }
+.form-field-r {
+   background: #f3f3f3;
+   padding:0 2px 4px 2px;
+   margin-bottom:10px;
+   width:363px;
+   height:24px;
+   outline:none;
+   float:right;
+   text-align:right;
+   font-size:12px;
+   color: #a58fa6;
+   font-style:italic;
+   border: solid 1px #a58fa6;
+   position:relative;
+   z-index:100;
+   line-height:32px;
+   }
+.form-field-r:hover {
+   background: #ffffff;
+   font-style: normal;
+   border: solid 1px #6d4373;
+   }
+.form-field-r:focus {
+   background: #ffffff;
+   color: #a58fa6;
+   font-style: normal;
+	font-weight: normal;
+	border: solid 1px #92af4b;
+   }
+.form-line-r{ float:right; width:370px; height:70px; text-align:right; direction:rtl; padding-bottom:8px;}
+
+.form-title-r {
+	width:360px;
+   margin-bottom:2px;
+   color: #6d4373;
+   float:right;
+   font-size:12px;
+   text-align:right;
+   font-family:armedium;
+   }
+.form-label-r{float: right; width:156px; height:20px; font-size:9px; color:#6d4373; text-align: center; direction:rtl; margin:20px 20px 0 0;}
+.form-label-r a:link { font-size:9px; color:#6d4373; text-align: center; float:right; margin-bottom:10px; font-family:armedium;} 
+.form-label-r input { margin:0 0 0 4px; float:right;}
+
+.selectdate-y { width:90px;  border: solid 1px #a58fa6; background: #f3f3f3; outline:none; color:#a58fa6; position:relative; top:-2px;}
+.selectdate-y:hover { background:#ffffff;   border: solid 1px #6d4373;}
+.selectdate-y:focus {background: #ffffff; color: #a58fa6;font-style: normal; font-weight: normal; border: solid 1px #92af4b;}	
+.selectdate-m { width:58px;  border: solid 1px #a58fa6; background: #f3f3f3; outline:none; color:#a58fa6; position:relative; top:-2px;}
+.selectdate-m:hover { background:#ffffff;   border: solid 1px #6d4373;}
+.selectdate-m:focus {background: #ffffff; color: #a58fa6;font-style: normal; font-weight: normal; border: solid 1px #92af4b;}	
+.form-radio-r { float:right; text-align:right; direction:rtl;}
+.form-line-r span{
+	
+    color: #6d4373;
+    float:right;
+	text-align:right;
+	direction:rtl;
+    font-size:12px;
+    text-align:right;
+	margin:0px 5px 0 10px;
+	}
+.form-line-r span input{ margin:1px 6px 0 3px;}
+.form-line-r span label{ margin:1px 0 0 0; vertical-align:top;}
+
+.validation span{ color:rgb(193, 39, 45) !important; font-size:11px !important; top:-10px; position:relative; font-family:armedium;}
+
+
+
+.indexbtn{ width:448px; padding:0; margin:0;}
+.indexbtn a { border:0px;}
+.indexbtn a img { margin-right:3px;}
+	

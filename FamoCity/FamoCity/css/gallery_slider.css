@@ -1,0 +1,57 @@
+﻿
+.jimgMenu {
+	position: relative;
+	width: 960px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0px 0px 0px 0px;
+}
+
+.jimgMenu ul {
+	list-style: none;
+	margin: 0px;
+	display: block;
+	height: 300px;
+	width: 1900px;
+	
+	}
+
+.jimgMenu ul li {
+	float: left;
+}
+
+.jimgMenu ul li a {
+	text-indent: -1000px;
+	background:#FFFFFF none repeat scroll 0%;
+	border-right: 2px solid #fff;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	width:80px;
+	height: 300px;
+}
+
+.jimgMenu ul li.landscapes a {
+	background: url(../images/slideshow/landscapes.jpg) repeat scroll 0%;
+}
+
+.jimgMenu ul li.people a {
+	background: url(../images/slideshow/people.jpg) repeat scroll 0%;
+}
+
+.jimgMenu ul li.nature a {
+	background: url(../images/slideshow/nature.jpg) repeat scroll 0%;
+}
+.jimgMenu ul li.abstract a {
+	background: url(../images/slideshow/abstract.jpg) repeat scroll 0%;
+}
+
+.jimgMenu ul li.urban a {
+	background: url(../images/slideshow/urban.jpg) repeat scroll 0%;
+	min-width:629px;
+	
+}
+
+.clear {
+	clear: both;
+}

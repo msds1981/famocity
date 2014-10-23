@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd0" filename="NopService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?disco" filename="NopService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?wsdl" filename="NopService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd4" filename="NopService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd1" filename="NopService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd3" filename="NopService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd2" filename="NopService3.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,349 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterUsr.master.cs" Inherits="FamoCity.MasterUsr" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="newfiles/css/boilerplate.css" rel="stylesheet" type="text/css" />
+    <link href="newfiles/css/index.css" rel="stylesheet" type="text/css" />
+    <!-- Orignal Jquery -->
+    <script src="newfiles/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="newfiles/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <!-- Notifications drop down -->
+    <script src="newfiles/js/notification.js" type="text/javascript"></script>
+    <script src="newfiles/js/respond.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Top Header Start -->
+    <div class="gridContainer clearfix">
+        <!-- Top Header Wrapper Start -->
+        <div id="Top_Header_Wrapper">
+            <div id="logo">
+                <img src="newfiles/images/logo.png" alt="Logo" title="FamoCity" /></div>
+            <!-- Notification Start -->
+            <div id="Notification">
+                <div id="notify_list">
+                    <ul class="noti_ul">
+                        <li class="add_topic"><a id="button_add_topic" href="#">
+                            <img src="newfiles/images/add_topic.png" /></a></li>
+                        <li class="friends_noti"><span class="notired">34</span> <a href="#">
+                            <img src="newfiles/images/friends_icon.png" /></a>
+                            <div class="drpdwn_friends listdown">
+                                <div class="noti_arrow">
+                                </div>
+                                <!-- Friends Content Start -->
+                                <div class="friend_container_title">
+                                    طلبات الصداقة
+                                </div>
+                                <div class="friends_part_frame">
+                                    <ul>
+                                        <li><a href="#" class="inboxactive">البحث عن الاصدقاء</a></li>
+                                        <li><a href="#">اعدادات الاصدقاء</a></li>
+                                    </ul>
+                                </div>
+                                <div class="friend_items_con">
+                                    <ul>
+                                        <li>
+                                            <div class="friend_item">
+                                                <div class="friend_sender_name">
+                                                    مصطفي رحاب</div>
+                                                <div class="friend_confirm">
+                                                    <a class="accept_friend" href="javascript:void(0);">قبول</a> 
+                                                    <span><a class="refuse_friend" href="javascript:void(0);">رفض</a></span>
+                                                </div>
+                                                <div class="clr">
+                                                </div>
+                                                <div class="friend_time">
+                                                    صديق مشترك</div>
+                                            </div>
+                                            <div class="friend_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="friend_item">
+                                                <div class="friend_sender_name">
+                                                    محمد سعيد</div>
+                                                <div class="friend_confirm">
+                                                    <a class="accept_friend" href="#">قبول</a> <span><a class="refuse_friend" href="#">رفض</a></span>
+                                                </div>
+                                                <div class="clr">
+                                                </div>
+                                                <div class="friend_time">
+                                                    صديقين مشتركين</div>
+                                            </div>
+                                            <div class="friend_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="friend_item">
+                                                <div class="friend_sender_name">
+                                                    مصطفي مجدي</div>
+                                                <div class="friend_confirm">
+                                                    <a class="accept_friend" href="#">قبول</a> <span><a class="refuse_friend" href="#">رفض</a></span>
+                                                </div>
+                                                <div class="clr">
+                                                </div>
+                                                <div class="friend_time">
+                                                    صديق مشترك</div>
+                                            </div>
+                                            <div class="friend_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="friend_item">
+                                                <div class="friend_sender_name">
+                                                    شريف فتحي</div>
+                                                <div class="friend_confirm">
+                                                    <a class="accept_friend" href="#">قبول</a> <span><a class="refuse_friend" href="#">رفض</a></span>
+                                                </div>
+                                                <div class="clr">
+                                                </div>
+                                                <div class="friend_time">
+                                                    ثلاث اصدقاء مشتركين</div>
+                                            </div>
+                                            <div class="friend_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="more_friends">
+                                    <a href="#">مشاهدة باقى الطلبات</a></div>
+                                <!-- Friends Content End -->
+                            </div>
+                        </li>
+                        <li class="alerts_noti"><span class="notired">99+</span> <a href="#">
+                            <img src="newfiles/images/alerts_icon.png" /></a>
+                            <div class="drpdwn_alerts listdown">
+                                <div class="noti_arrow">
+                                </div>
+                                <!-- Alerts Content Start -->
+                                <div class="alert_container_title">
+                                    الاشعارات
+                                </div>
+                                <div class="alerts_part_frame">
+                                    <ul>
+                                        <li><a href="#" class="inboxactive">تحديد كمقروء</a></li>
+                                        <li><a href="#">اعدادات الاشعارات</a></li>
+                                    </ul>
+                                </div>
+                                <div class="alert_items_con">
+                                    <ul>
+                                        <li>
+                                            <div class="alert_item">
+                                                <div class="alert_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="alert_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="alert_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="alert_item">
+                                                <div class="alert_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="alert_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="alert_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="alert_item">
+                                                <div class="alert_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="alert_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="alert_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="alert_item">
+                                                <div class="alert_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="alert_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="alert_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="more_alerts">
+                                    <a href="#">مشاهدة باقى الاشعارات</a></div>
+                                <!-- Alerts Content End -->
+                            </div>
+                        </li>
+                        <li class="msgs_noti"><span class="notired">22</span> <a href="#">
+                            <img src="newfiles/images/msgs_icon.png" /></a>
+                            <div class="drpdwn_msgs listdown">
+                                <div class="noti_arrow">
+                                </div>
+                                <!-- Msgs Content Start -->
+                                <div class="msg_container_title">
+                                    الرسائل الخاصة
+                                </div>
+                                <div class="msgs_part_frame">
+                                    <ul>
+                                        <li><a href="#" class="inboxactive">(99) البريد الوارد</a></li>
+                                        <li><a href="#">(120) الرسائل الاخري</a></li>
+                                        <li><a href="#">ارسال رسالة جديدة</a></li>
+                                    </ul>
+                                </div>
+                                <div class="msg_items_con">
+                                    <ul>
+                                        <li>
+                                            <div class="msg_item">
+                                                <div class="msg_sender_name">
+                                                    محمد مصطفى صلاح</div>
+                                                <div class="msg_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="msg_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="msg_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_item">
+                                                <div class="msg_sender_name">
+                                                    محمد مصطفى صلاح</div>
+                                                <div class="msg_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="msg_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="msg_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_item">
+                                                <div class="msg_sender_name">
+                                                    محمد مصطفى صلاح</div>
+                                                <div class="msg_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="msg_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="msg_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_item">
+                                                <div class="msg_sender_name">
+                                                    محمد مصطفى صلاح</div>
+                                                <div class="msg_content">
+                                                    انا جايلك النهاردة استنانى ضرورى متنساش</div>
+                                                <div class="msg_time">
+                                                    الثلاثاء 25 نوفمبر</div>
+                                            </div>
+                                            <div class="msg_item_pic">
+                                                <img src="newfiles/images/prof_pic.jpg" /></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="more_msgs">
+                                    <a href="#">مشاهدة باقى الرسائل</a></div>
+                                <!-- Msgs Content End -->
+                            </div>
+                        </li>
+                        <li class="settings_noti"><a href="#">
+                            <img src="newfiles/images/setting_icon.png" /></a>
+                            <div class="drpdwn_settings listdown">
+                                <div class="noti_arrow">
+                                </div>
+                                <!-- User Setting Content start -->
+                                <div class="prof_info">
+                                    <div class="prof_pic">
+                                        <img src="newfiles/images/gall3.jpg" /></div>
+                                    <div class="prof_edit">
+                                        <div class="prof_name">
+                                            محمد مصطفى صلاح</div>
+                                        <div class="edit_prof">
+                                            <a href="#">تعديل الملف الشخصي</a></div>
+                                    </div>
+                                    <div class="clr">
+                                    </div>
+                                </div>
+                                <div class="setting_menu">
+                                    <ul>
+                                        <li><a href="#">القوائم</a></li>
+                                        <li><a href="#">مساعدة</a></li>
+                                        <li><a href="#">اختصارات لوحة المفاتيح</a></li>
+                                        <li><a href="#">اعدادات الخصوصية</a></li>
+                                        <li><a href="#">اعدادات عامة</a></li>
+                                        <li><a href="#">تسجيل الخروج</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- User Setting Content end -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- Notification End -->
+            </div>
+            <div id="top_search">
+                <input type="text" name="top_search" class="top_search_input" value="اكتب كلمة البحث" />
+                <input type="submit" name="top_search_submit" class="top_search_submit" value="ابحث" />
+            </div>
+            <!-- Top Header Wrapper End -->
+        </div>
+        <!-- Top Header End -->
+    </div>
+    <!-- Div For All Content Start -->
+    <div id="page_content">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+
+
+
+    </div>
+    <!-- Hidden Add Topic Div Start -->
+    <div id="modal">
+        <div class="heading">
+            اضافة موضوع جديد
+        </div>
+        <div class="topic_content">
+            <textarea> اكتب منشورك الجديد</textarea>
+            <div class="topic_send">
+                <input type="submit" name="add_topic" value="ارسال" class="add_tpc_submit">
+            </div>
+        </div>
+    </div>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="newfiles/js/jquery.add_topic.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#button_add_topic').click(function (e) { // Button which will activate our modal
+                $('#modal').reveal({ // The item which will be opened with reveal
+                    animation: 'fade',                   // fade, fadeAndPop, none
+                    animationspeed: 600,                       // how fast animtions are
+                    closeonbackgroundclick: true,              // if you click background will modal close?
+                    dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                });
+                return false;
+            });
+        });
+    </script>
+    <!-- Hidden Add Topic Div End -->
+
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    </form>
+</body>
+</html>

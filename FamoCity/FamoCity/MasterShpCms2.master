@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterShpMain.Master" AutoEventWireup="true"
+    CodeBehind="MasterShpCms2.master.cs" Inherits="FamoCity.MasterShpCms2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%--<script src="/js/cmsScript.js" type="text/javascript"></script>--%>
+        <%--<script type="text/javascript">
+            $(document).ready(function () {
+                $("#lnkUserInfo").click(function () {
+                    GoToPage("/ShopBasic3.aspx");
+                });
+                $("#lnkUserStatus").click(function () {
+                    GoToPage("/ShopStatus3.aspx");
+                });
+                $("#lnkPassword").click(function () {
+                    GoToPage("/shopPass3.aspx");
+                });
+                $("#lnkBrands").click(function () {
+                    GoToPage("/shopBrands3.aspx");
+                });
+
+                //link source in shopBrands3.aspx
+                $(".lnkGridBrand").click(function () {
+                });
+            });
+            function redirectpage() {
+                var id = $(this).attr("bid");
+                alert(id.toString());
+                GoToPage("/shopBrandAdd3.aspx?id=" + id);
+            }
+        </script>--%>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- START HEADER SEPERATOR -->
+    <div id="header_seperator">
+    </div>
+    <!-- END HEADER SEPERATOR -->
+    <!-- GRID CONTAINER START -->
+    <div class="gridContainer clearfix">
+        <!-- MAIN CONTENT START -->
+        <div id="main_content">
+            <!-- Left Sidebar Start -->
+            <div id="left_sidebar_cms">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderChield" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- -->
+                <!-- Left Sidebar End -->
+            </div>
+            <!-- Right Sidebar Start -->
+            <div id="right_sidebar_cms">
+                <!-- INSIDE RIGHT SIDE BAR START -->
+                <div id="inside_right_sidebar_cms">
+                    <!-- CMS Title START -->
+                    <div id="company_cms_title">
+                        <span>لوحة تحكم العضو
+                            <img src="/images/cpsetting.png" /></span>
+                    </div>
+                    <!-- CMS Title END -->
+                    <div class="clear">
+                    </div>
+                    <!-- First Result Start -->
+                    <div id="w">
+                        <nav>
+      <ul id="nav">
+        <li><a id="sss" href="/Main">الرئيسية</a>
+        </li>
+        <li><a href="#">الماركات</a>
+          <ul>
+            <li><a href="/Shop/edit/Brand">إضافة ماركة</a></li>
+            <li id="lnkBrands"><a href="/Shop/edit/Brands">عرض الماركات</a></li>
+          </ul>
+        </li>
+        <li><a href="#">المنتجات</a>
+          <ul>
+            <li><a href="/Shop/edit/Prod">إضافة منتج</a></li>
+            <li><a href="/Shop/edit/Prods">عرض المنتجات</a></li>
+          </ul>
+        </li>
+        <li><a href="#">العروض الترويجية</a>
+          <ul>
+            <li><a href="/Shop/edit/Promosion">إضافة عرض</a></li>
+            <li><a href="/Shop/edit/Promosions">عرض العروض</a></li>
+          </ul>
+        </li>
+        <li><a href="#">إعدادات الصفحات</a>
+          <ul>
+            <li><a href="/Shop/edit/Info" class="activeright">بيانات المتجر</a></li>
+            <li><a href="/Shop/edit/Banars">البنرات</a></li>
+            <li><a href="/Shop/edit/Logo">شعار الشركة</a></li>
+            <li><a href="/Shop/edit/Video">فيديو المقدمة</a></li>
+            <%--<li><a href="/Shop/edit/Activities">نشاطات الشركة</a></li>--%>
+           <li><a href="/Shop/edit/Map">موقع المتجر</a></li>
+          </ul>
+        </li>
+        <li><a href="#">إعدادات شخصية</a>
+          <ul>
+            <li id="lnkUserInfo"><a href="/Shop/edit/OwnerInfo">البيانات الشخصية</a></li>
+            <li id="lnkPassword"><a href="/Shop/edit/ChangePassword">تغيير كلمة المرور</a></li>
+            <li id="lnkUserStatus"><a href="/Shop/edit/status">تغيير الحالة</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+                    </div>
+                    <!-- First Result End -->
+                </div>
+                <!-- INSIDE RIGHT SIDE BAR END -->
+                <!-- Right Sidebar End -->
+            </div>
+            <!-- MAIN CONTENT END -->
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!-- GRID CONTAINER END -->
+</asp:Content>

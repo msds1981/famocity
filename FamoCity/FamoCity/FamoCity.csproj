@@ -1,0 +1,1393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1F99DB0-EA9A-48DD-AFD6-086D9C3D95E9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FamoCity</RootNamespace>
+    <AssemblyName>FamoCity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="FamoEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FamoEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FamoLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FamoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\mUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admActivity.aspx" />
+    <Content Include="admAdvDisc.aspx" />
+    <Content Include="admAdvPeriod.aspx" />
+    <Content Include="admAdvPrice.aspx" />
+    <Content Include="admChar.aspx" />
+    <Content Include="admCharGrop.aspx" />
+    <Content Include="admCharGroupShow.aspx" />
+    <Content Include="admCharShow.aspx" />
+    <Content Include="admChrCloth.aspx" />
+    <Content Include="admChrClothShow.aspx" />
+    <Content Include="admFeedback.aspx" />
+    <Content Include="admGroups.aspx" />
+    <Content Include="admIndex.aspx" />
+    <Content Include="admIndexShow.aspx" />
+    <Content Include="AdminMenu\css\ie.css" />
+    <Content Include="AdminMenu\css\style.css" />
+    <Content Include="AdminMenu\images\title.png" />
+    <Content Include="AdminMenu\js\hoverIntent.js" />
+    <Content Include="AdminMenu\js\jquery-1.3.1.min.js" />
+    <Content Include="AdminMenu\js\jquery.dropdown.js" />
+    <Content Include="AdminMenu\js\jquery.dropdownPlain.js" />
+    <Content Include="admList.aspx" />
+    <Content Include="admLogs.aspx" />
+    <Content Include="admMain.aspx" />
+    <Content Include="admObjectsGroups.aspx" />
+    <Content Include="admObjectShow.aspx" />
+    <Content Include="admOption.aspx" />
+    <Content Include="admPermissionadd.aspx" />
+    <Content Include="admPermissionShow.aspx" />
+    <Content Include="admRoles.aspx" />
+    <Content Include="admScene.aspx" />
+    <Content Include="admSceneShow.aspx" />
+    <Content Include="admTask.aspx" />
+    <Content Include="admTrigger.aspx" />
+    <Content Include="admTriggerShow.aspx" />
+    <Content Include="admUserAdd.aspx" />
+    <Content Include="admAgree.aspx" />
+    <Content Include="admLang.aspx" />
+    <Content Include="admNews.aspx" />
+    <Content Include="admUsers.aspx" />
+    <Content Include="AgreePage.aspx" />
+    <Content Include="CImage.aspx" />
+    <Content Include="css\feedback.css" />
+    <Content Include="css\LoginResponsive.css" />
+    <Content Include="css\loginstyle.css" />
+    <Content Include="css\LoginTablet.css" />
+    <Content Include="css\uploader\images\defult_upimg.png" />
+    <Content Include="css\uploader\images\error_ico.png" />
+    <Content Include="css\uploader\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\uploader\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\uploader\images\ui-bg_highlight-soft_75_cccccc_1x1000.png" />
+    <Content Include="css\uploader\images\x_gray.png" />
+    <Content Include="css\uploader\images\x_red.png" />
+    <Content Include="css\uploader\jquery-ui.1.8.13.css" />
+    <Content Include="css\uploader\jquery.fileupload-ui.css" />
+    <Content Include="css\uploader\style.css" />
+    <Content Include="Default2.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="css\boilerplate.css" />
+    <Content Include="css\datePicker.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\forgetpassword.css" />
+    <Content Include="css\framewarp.css" />
+    <Content Include="css\gallery_slider.css" />
+    <Content Include="css\global.css" />
+    <Content Include="css\jquery.mCustomScrollbar.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\loginpage.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\masterpage1.css" />
+    <Content Include="css\masterpage2.css" />
+    <Content Include="css\newpassword.css" />
+    <Content Include="css\pop_up.css" />
+    <Content Include="css\pro_dropline.css" />
+    <Content Include="css\pro_dropline_ie.css" />
+    <Content Include="css\screen.css" />
+    <Content Include="css\scroller.css" />
+    <Content Include="css\shop-regiser.css" />
+    <Content Include="css\sliding-image-gallery-v2.css" />
+    <Content Include="css\slidshow.css" />
+    <Content Include="css\step2.css" />
+    <Content Include="css\step3.css" />
+    <Content Include="css\step4.css" />
+    <Content Include="css\step5.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\Untitled-9.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="download.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="fonts\font.css" />
+    <Content Include="fonts\helveticaneueltarabic55roman.html" />
+    <Content Include="images\1.png" />
+    <Content Include="images\11.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\22.png" />
+    <Content Include="images\add_ico.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\ajax-loader2.gif" />
+    <Content Include="images\amrdiab.jpg" />
+    <Content Include="images\appreciate.png" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\arrow_down.png" />
+    <Content Include="images\arrow_up.png" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\bg_footer.png" />
+    <Content Include="images\bg_header.png" />
+    <Content Include="images\black.png" />
+    <Content Include="images\box shado.png" />
+    <Content Include="images\btn-slide.gif" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\cms_remove.png" />
+    <Content Include="images\comp_circle.png" />
+    <Content Include="images\content\dude.png" />
+    <Content Include="images\content\girl.png" />
+    <Content Include="images\cpp_home.png" />
+    <Content Include="images\cpsetting.png" />
+    <Content Include="images\cross-small-icon.png" />
+    <Content Include="images\defaults\10\1.png" />
+    <Content Include="images\defaults\10\2.png" />
+    <Content Include="images\defaults\10\3.png" />
+    <Content Include="images\defaults\10\4.png" />
+    <Content Include="images\defaults\10\5.png" />
+    <Content Include="images\defaults\11\1.png" />
+    <Content Include="images\defaults\11\2.png" />
+    <Content Include="images\defaults\11\3.png" />
+    <Content Include="images\defaults\11\4.png" />
+    <Content Include="images\defaults\11\5.png" />
+    <Content Include="images\defaults\1\1.png" />
+    <Content Include="images\defaults\1\2.png" />
+    <Content Include="images\defaults\1\3.png" />
+    <Content Include="images\defaults\1\4.png" />
+    <Content Include="images\defaults\1\5.png" />
+    <Content Include="images\defaults\2\1.png" />
+    <Content Include="images\defaults\2\2.png" />
+    <Content Include="images\defaults\2\3.png" />
+    <Content Include="images\defaults\2\4.png" />
+    <Content Include="images\defaults\2\5.png" />
+    <Content Include="images\defaults\3\1.png" />
+    <Content Include="images\defaults\3\2.png" />
+    <Content Include="images\defaults\3\3.png" />
+    <Content Include="images\defaults\3\4.png" />
+    <Content Include="images\defaults\3\5.png" />
+    <Content Include="images\defaults\7\1.png" />
+    <Content Include="images\defaults\7\2.png" />
+    <Content Include="images\defaults\7\3.png" />
+    <Content Include="images\defaults\7\4.png" />
+    <Content Include="images\defaults\7\5.png" />
+    <Content Include="images\defaults\8\1.png" />
+    <Content Include="images\defaults\8\2.png" />
+    <Content Include="images\defaults\8\3.png" />
+    <Content Include="images\defaults\8\4.png" />
+    <Content Include="images\defaults\8\5.png" />
+    <Content Include="images\defaults\9\1.png" />
+    <Content Include="images\defaults\9\2.png" />
+    <Content Include="images\defaults\9\3.png" />
+    <Content Include="images\defaults\9\4.png" />
+    <Content Include="images\defaults\9\5.png" />
+    <Content Include="images\defaults\company.png" />
+    <Content Include="images\defaults\Famo-default.png" />
+    <Content Include="images\defaults\famo_female.png" />
+    <Content Include="images\defaults\famo_male.png" />
+    <Content Include="images\defaults\image-not-found.png" />
+    <Content Include="images\defaults\image-not-found2.png" />
+    <Content Include="images\defaults\image-not-found4.png" />
+    <Content Include="images\defaults\shop-not-found-image.png" />
+    <Content Include="images\default_thumb.jpg" />
+    <Content Include="images\defined_arrow.png" />
+    <Content Include="images\defult_upimg.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\delete_ico.png" />
+    <Content Include="images\email.png" />
+    <Content Include="images\facebook-h.png" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\famo_logo.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\female-a.png" />
+    <Content Include="images\female-h.png" />
+    <Content Include="images\female.png" />
+    <Content Include="images\foot-01.png" />
+    <Content Include="images\footer_bg.png" />
+    <Content Include="images\forms\bg_related_act.gif" />
+    <Content Include="images\forms\bubble_inner.gif" />
+    <Content Include="images\forms\bubble_left.gif" />
+    <Content Include="images\forms\bubble_right.gif" />
+    <Content Include="images\forms\choose-file.gif" />
+    <Content Include="images\forms\error_left.gif" />
+    <Content Include="images\forms\error_right.gif" />
+    <Content Include="images\forms\form_inp.gif" />
+    <Content Include="images\forms\form_inp_error.gif" />
+    <Content Include="images\forms\form_reset.gif" />
+    <Content Include="images\forms\form_select.gif" />
+    <Content Include="images\forms\form_select_small.gif" />
+    <Content Include="images\forms\form_submit.gif" />
+    <Content Include="images\forms\form_textarea.gif" />
+    <Content Include="images\forms\header_related_act.gif" />
+    <Content Include="images\forms\icon_calendar.jpg" />
+    <Content Include="images\forms\icon_edit.gif" />
+    <Content Include="images\forms\icon_list_arrow.gif" />
+    <Content Include="images\forms\icon_minus.gif" />
+    <Content Include="images\forms\icon_plus.gif" />
+    <Content Include="images\forms\lines_dotted_short.gif" />
+    <Content Include="images\forms\step_1.gif" />
+    <Content Include="images\forms\step_dark_left.gif" />
+    <Content Include="images\forms\step_dark_right.gif" />
+    <Content Include="images\forms\step_dark_round.gif" />
+    <Content Include="images\forms\step_light_left.gif" />
+    <Content Include="images\forms\step_light_right.gif" />
+    <Content Include="images\forms\step_light_round.gif" />
+    <Content Include="images\forms\upload_file.gif" />
+    <Content Include="images\friend.png" />
+    <Content Include="images\game.png" />
+    <Content Include="images\gbs.png" />
+    <Content Include="images\gplus-h.png" />
+    <Content Include="images\gplus.png" />
+    <Content Include="images\header_bg.png" />
+    <Content Include="images\header_seperator.png" />
+    <Content Include="images\hover-bg.png" />
+    <Content Include="images\imagesui-bg_flat_75_ffffff_40x100.png.png" />
+    <Content Include="images\img_1.png" />
+    <Content Include="images\inbox.png" />
+    <Content Include="images\indexbtn1.png" />
+    <Content Include="images\indexbtn2.png" />
+    <Content Include="images\indexbtn3.png" />
+    <Content Include="images\item-1.png" />
+    <Content Include="images\item-3.png" />
+    <Content Include="images\item-4.png" />
+    <Content Include="images\item-5.png" />
+    <Content Include="images\item-6.png" />
+    <Content Include="images\like.png" />
+    <Content Include="images\line.png" />
+    <Content Include="images\loadinfo.net.gif" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\login\icon_back_login.gif" />
+    <Content Include="images\login\inp_login.gif" />
+    <Content Include="images\login\loginbox_bg.png" />
+    <Content Include="images\login\login_bg.jpg" />
+    <Content Include="images\login\submit_login.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1-0111.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\male-a.png" />
+    <Content Include="images\male-h.png" />
+    <Content Include="images\male.png" />
+    <Content Include="images\numbers_icon.png" />
+    <Content Include="images\oran.png" />
+    <Content Include="images\pass.png" />
+    <Content Include="images\pbar-ani.gif" />
+    <Content Include="images\popup\1.png" />
+    <Content Include="images\popup\2.png" />
+    <Content Include="images\popup\3.png" />
+    <Content Include="images\popup\4.png" />
+    <Content Include="images\popup\5.png" />
+    <Content Include="images\popup\6.png" />
+    <Content Include="images\popup\bg.jpg" />
+    <Content Include="images\popup\dropdown.png" />
+    <Content Include="images\popup\input.gif" />
+    <Content Include="images\popup\pre.png" />
+    <Content Include="images\popup\preloader.gif" />
+    <Content Include="images\popup\shadow1-left.png" />
+    <Content Include="images\popup\shadow1-right.png" />
+    <Content Include="images\popup\shadow2-left.png" />
+    <Content Include="images\popup\shadow2-middle.png" />
+    <Content Include="images\popup\shadow2-right.png" />
+    <Content Include="images\popup\shadow3.png" />
+    <Content Include="images\popup\video-close.png" />
+    <Content Include="images\popup\video-play.png" />
+    <Content Include="images\popup_bg.jpg" />
+    <Content Include="images\popup_bg.png" />
+    <Content Include="images\product_item.png" />
+    <Content Include="images\search_icon.png" />
+    <Content Include="images\setting.png" />
+    <Content Include="images\settings.png" />
+    <Content Include="images\shadow-cr.png" />
+    <Content Include="images\shared\blank.gif" />
+    <Content Include="images\shared\border_bit.jpg" />
+    <Content Include="images\shared\cal_th_repeat.jpg" />
+    <Content Include="images\shared\cal_top_bg.jpg" />
+    <Content Include="images\shared\cal_top_repeat.jpg" />
+    <Content Include="images\shared\checkbox.gif" />
+    <Content Include="images\shared\content_repeat.jpg" />
+    <Content Include="images\shared\corner_bottom_left.jpg" />
+    <Content Include="images\shared\corner_bottom_right.jpg" />
+    <Content Include="images\shared\corner_top_left.jpg" />
+    <Content Include="images\shared\corner_top_right.jpg" />
+    <Content Include="images\shared\icon_idlogo.jpg" />
+    <Content Include="images\shared\logo.png" />
+    <Content Include="images\shared\nav\account_drop_bg.gif" />
+    <Content Include="images\shared\nav\account_line.gif" />
+    <Content Include="images\shared\nav\back_0.gif" />
+    <Content Include="images\shared\nav\back_1x.gif" />
+    <Content Include="images\shared\nav\Copy of pro_line_1.gif" />
+    <Content Include="images\shared\nav\divider.jpg" />
+    <Content Include="images\shared\nav\icon_acc_inbox.gif" />
+    <Content Include="images\shared\nav\icon_acc_personal.gif" />
+    <Content Include="images\shared\nav\icon_acc_projects.gif" />
+    <Content Include="images\shared\nav\icon_acc_settings.gif" />
+    <Content Include="images\shared\nav\icon_acc_stats.gif" />
+    <Content Include="images\shared\nav\nav_logout.gif" />
+    <Content Include="images\shared\nav\nav_myaccount.gif" />
+    <Content Include="images\shared\nav\pro_line_0x.gif" />
+    <Content Include="images\shared\nav\pro_line_1.gif" />
+    <Content Include="images\shared\nav\pro_line_2.gif" />
+    <Content Include="images\shared\nav\repeat.jpg" />
+    <Content Include="images\shared\side_shadowleft.jpg" />
+    <Content Include="images\shared\side_shadowright.jpg" />
+    <Content Include="images\shared\top_bg.jpg" />
+    <Content Include="images\shared\top_search_btn.gif" />
+    <Content Include="images\shared\top_search_inp.gif" />
+    <Content Include="images\shared\top_search_select.gif" />
+    <Content Include="images\shared\year_next.gif" />
+    <Content Include="images\shared\year_prev.gif" />
+    <Content Include="images\shop.png" />
+    <Content Include="images\shopmain\bg_3rod.png" />
+    <Content Include="images\shopmain\bg_fulo.png" />
+    <Content Include="images\shopmain\bg_montg.png" />
+    <Content Include="images\shopmain\bg_news.png" />
+    <Content Include="images\shopmain\bg_zwar.png" />
+    <Content Include="images\shopmain\No_Content.png" />
+    <Content Include="images\shopping.png" />
+    <Content Include="images\slashed_icons.png" />
+    <Content Include="images\slideshow\001.jpg" />
+    <Content Include="images\slideshow\002.jpg" />
+    <Content Include="images\slideshow\003.jpg" />
+    <Content Include="images\slideshow\004.jpg" />
+    <Content Include="images\slideshow\abstract.jpg" />
+    <Content Include="images\slideshow\landscapes.jpg" />
+    <Content Include="images\slideshow\nature.jpg" />
+    <Content Include="images\slideshow\people.jpg" />
+    <Content Include="images\slideshow\urban.jpg" />
+    <Content Include="images\slideshow\_vti_cnf\abstract.jpg" />
+    <Content Include="images\slideshow\_vti_cnf\landscapes.jpg" />
+    <Content Include="images\slideshow\_vti_cnf\nature.jpg" />
+    <Content Include="images\slideshow\_vti_cnf\people.jpg" />
+    <Content Include="images\slideshow\_vti_cnf\urban.jpg" />
+    <Content Include="images\social.png" />
+    <Content Include="images\table\actions_slider_bg.gif" />
+    <Content Include="images\table\action_delete.gif" />
+    <Content Include="images\table\action_edit.gif" />
+    <Content Include="images\table\content_round_repeat.jpg" />
+    <Content Include="images\table\content_round_top.jpg" />
+    <Content Include="images\table\dropdown_actions.gif" />
+    <Content Include="images\table\icon_close_blue.gif" />
+    <Content Include="images\table\icon_close_green.gif" />
+    <Content Include="images\table\icon_close_red.gif" />
+    <Content Include="images\table\icon_close_yellow.gif" />
+    <Content Include="images\table\message_blue.gif" />
+    <Content Include="images\table\message_green.gif" />
+    <Content Include="images\table\message_red.gif" />
+    <Content Include="images\table\message_yellow.gif" />
+    <Content Include="images\table\paging_far_left.gif" />
+    <Content Include="images\table\paging_far_right.gif" />
+    <Content Include="images\table\paging_left.gif" />
+    <Content Include="images\table\paging_right.gif" />
+    <Content Include="images\table\select_number_rows.gif" />
+    <Content Include="images\table\table_header.jpg" />
+    <Content Include="images\table\table_header_checkbox.jpg" />
+    <Content Include="images\table\table_header_options.jpg" />
+    <Content Include="images\table\table_header_repeat.jpg" />
+    <Content Include="images\table\table_icon_1.gif" />
+    <Content Include="images\table\table_icon_2.gif" />
+    <Content Include="images\table\table_icon_3.gif" />
+    <Content Include="images\table\table_icon_4.gif" />
+    <Content Include="images\table\table_icon_5.gif" />
+    <Content Include="images\table\table_sort_arrow.gif" />
+    <Content Include="images\thumb\1.jpg" />
+    <Content Include="images\thumb\2.jpg" />
+    <Content Include="images\thumb\3.jpg" />
+    <Content Include="images\thumb\4.jpg" />
+    <Content Include="images\thumb\5.jpg" />
+    <Content Include="images\thumb\6.jpg" />
+    <Content Include="images\titel-012.png" />
+    <Content Include="images\title_side.png" />
+    <Content Include="images\twitter-h.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\unlike.png" />
+    <Content Include="images\untitled-1-0sa1.png" />
+    <Content Include="images\up_arrow.png" />
+    <Content Include="images\user_data_bg.png" />
+    <Content Include="images\user_img.png" />
+    <Content Include="images\user_info_icon.png" />
+    <Content Include="images\user_pic.png" />
+    <Content Include="images\views_icon.png" />
+    <Content Include="images\white-arrow.gif" />
+    <Content Include="images\youtube_btn.png" />
+    <Content Include="img\13.jpg" />
+    <Content Include="img\13s.jpg" />
+    <Content Include="img\Jaipur-1.JPG" />
+    <Content Include="img\Jaipur-2.JPG" />
+    <Content Include="img\Jaipur-3.JPG" />
+    <Content Include="img\Jaipur-4.JPG" />
+    <Content Include="img\Jaipur-5.JPG" />
+    <Content Include="img\Jaipur-6.JPG" />
+    <Content Include="js\Chat.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="js\LoginScript.js" />
+    <Content Include="js\base.js" />
+    <Content Include="js\social_albums.js" />
+    <Content Include="js\social_load.js" />
+    <Content Include="Message.aspx" />
+    <Content Include="Messages\.idea\encodings.xml" />
+    <Content Include="Messages\.idea\jsLibraryMappings.xml" />
+    <Content Include="Messages\.idea\misc.xml" />
+    <Content Include="Messages\.idea\modules.xml" />
+    <Content Include="Messages\.idea\scopes\scope_settings.xml" />
+    <Content Include="Messages\.idea\vcs.xml" />
+    <Content Include="Messages\.idea\workspace.xml" />
+    <Content Include="Messages\msg.html" />
+    <Content Include="Messages\Scripts\AngelScript.js" />
+    <Content Include="Messages\Scripts\jquery-1.10.2.js" />
+    <Content Include="Messages\Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Messages\Scripts\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Messages\Styles\CSS\ChatStyles.css" />
+    <Content Include="Messages\Styles\CSS\jquery.mCustomScrollbar.css" />
+    <Content Include="Messages\Styles\CSS\responsive.css" />
+    <Content Include="Messages\Styles\CSS\Styles.css" />
+    <Content Include="Messages\Styles\Images\arrow-box-header.png" />
+    <Content Include="Messages\Styles\Images\arrow-box-msg-l.png" />
+    <Content Include="Messages\Styles\Images\arrow-box-msg-r.png" />
+    <Content Include="Messages\Styles\Images\arrow-down-black.png" />
+    <Content Include="Messages\Styles\Images\avatar.jpeg" />
+    <Content Include="Messages\Styles\Images\btn-arrow-p.png" />
+    <Content Include="Messages\Styles\Images\close-white.png" />
+    <Content Include="Messages\Styles\Images\content-msg-arrow-g.png" />
+    <Content Include="Messages\Styles\Images\content-msg-arrow-p.png" />
+    <Content Include="Messages\Styles\Images\emoji-24.png" />
+    <Content Include="Messages\Styles\Images\emoji.png" />
+    <Content Include="Messages\Styles\Images\famo_logo.png" />
+    <Content Include="Messages\Styles\Images\friend.png" />
+    <Content Include="Messages\Styles\Images\gear-chat.png" />
+    <Content Include="Messages\Styles\Images\gear-white.png" />
+    <Content Include="Messages\Styles\Images\gear.png" />
+    <Content Include="Messages\Styles\Images\icon-box-search.png" />
+    <Content Include="Messages\Styles\Images\icon-msg-more.png" />
+    <Content Include="Messages\Styles\Images\icon-search-button.png" />
+    <Content Include="Messages\Styles\Images\info.png" />
+    <Content Include="Messages\Styles\Images\mail.png" />
+    <Content Include="Messages\Styles\Images\mark-sa7.png" />
+    <Content Include="Messages\Styles\Images\minimize-white.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-1-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-1.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-2-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-2.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-3-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-3.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-4-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-4.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-5-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-5.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-6-h.png" />
+    <Content Include="Messages\Styles\Images\pro-icon-6.png" />
+    <Content Include="Messages\Styles\Images\sm-arrow.png" />
+    <Content Include="Messages\Styles\Images\up-photo-p-24.png" />
+    <Content Include="Messages\Styles\Images\up-photo-p.png" />
+    <Content Include="Methods.aspx" />
+    <Content Include="newfiles\css\desktop.css" />
+    <Content Include="newfiles\css\fleep.css" />
+    <Content Include="newfiles\css\phone.css" />
+    <Content Include="newfiles\css\tablet.css" />
+    <Content Include="newfiles\images\down_arrow_small.png" />
+    <Content Include="newfiles\images\load-more.png" />
+    <Content Include="newfiles\images\t3agob.png" />
+    <Content Include="newfiles\js\shop-register.js" />
+    <Content Include="newfiles\js\user-register.js" />
+    <Content Include="js\cmsScript.js" />
+    <Content Include="js\edit-button.js" />
+    <Content Include="js\framewarp.js" />
+    <Content Include="js\General.js" />
+    <Content Include="js\javako.js" />
+    <Content Include="js\jquery-1.10.1.min.js" />
+    <Content Include="js\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery-easing-1.3.pack.js" />
+    <Content Include="js\jquery-easing-compatibility.1.2.pack.js" />
+    <Content Include="js\jquery.1.8.1.min.js" />
+    <Content Include="js\jquery.blockUI.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\jquery.sliding-image-gallery-v2.js" />
+    <Content Include="js\jquery.watermark.js" />
+    <Content Include="js\jquery.zaccordion.js" />
+    <Content Include="js\jquery.zaccordion.min.js" />
+    <Content Include="js\jquerypp.custom.js" />
+    <Content Include="js\jquery\Copy of custom_jquery.js" />
+    <Content Include="js\jquery\custom_jquery.js" />
+    <Content Include="js\jquery\date.js" />
+    <Content Include="js\jquery\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery\jquery.bind.js" />
+    <Content Include="js\jquery\jquery.datePicker.js" />
+    <Content Include="js\jquery\jquery.dimensions.js" />
+    <Content Include="js\jquery\jquery.filestyle.js" />
+    <Content Include="js\jquery\jquery.MultiFile.js" />
+    <Content Include="js\jquery\jquery.pngFix.pack.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5_style_2.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5_style_3.js" />
+    <Content Include="js\jquery\jquery.tooltip.js" />
+    <Content Include="js\jquery\jquery.usermode.js" />
+    <Content Include="js\jquery\ui.checkbox.js" />
+    <Content Include="js\jquery\ui.core.js" />
+    <Content Include="js\libs\jquery.js" />
+    <Content Include="js\libs\jquery.masonry.min.js" />
+    <Content Include="js\MenuScript.js" />
+    <Content Include="js\modernizr.custom.29473.js" />
+    <Content Include="js\nav.js" />
+    <Content Include="js\noti.js" />
+    <Content Include="js\popup.js" />
+    <Content Include="js\preview.js" />
+    <Content Include="newfiles\js\forgetpass.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\scroller.js" />
+    <Content Include="js\slideshow.js" />
+    <Content Include="js\social.js" />
+    <Content Include="js\social_mypage.js" />
+    <Content Include="js\uploader\application.js" />
+    <Content Include="js\uploader\jquery.fileupload-ui.js" />
+    <Content Include="js\uploader\jquery.fileupload.js" />
+    <Content Include="js\uploader\jquery.iframe-transport.js" />
+    <Content Include="js\uploader\jquery.tmpl.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginCms.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="msg.aspx" />
+    <Content Include="newfiles\css\boilerplate.css" />
+    <Content Include="newfiles\css\index.css" />
+    <Content Include="newfiles\css\jquery.mCustomScrollbar.css" />
+    <Content Include="newfiles\css\MQ.css" />
+    <Content Include="newfiles\fonts\344604493-DroidKufi-Regular.html" />
+    <Content Include="newfiles\images\1_01.gif" />
+    <Content Include="newfiles\images\1_02.gif" />
+    <Content Include="newfiles\images\1_022222.gif" />
+    <Content Include="newfiles\images\1_03.jpg" />
+    <Content Include="newfiles\images\1_04.gif" />
+    <Content Include="newfiles\images\1_05.gif" />
+    <Content Include="newfiles\images\aa11.jpg" />
+    <Content Include="newfiles\images\add_topic.png" />
+    <Content Include="newfiles\images\alerts_icon.png" />
+    <Content Include="newfiles\images\back_login.png" />
+    <Content Include="newfiles\images\bg.png" />
+    <Content Include="newfiles\images\close.gif" />
+    <Content Include="newfiles\images\comments_ico.png" />
+    <Content Include="newfiles\images\down_arrow.png" />
+    <Content Include="newfiles\images\famo_logo.png" />
+    <Content Include="newfiles\images\form_title_bg.png" />
+    <Content Include="newfiles\images\friends-icons\1.png" />
+    <Content Include="newfiles\images\friends-icons\2.png" />
+    <Content Include="newfiles\images\friends-icons\3.png" />
+    <Content Include="newfiles\images\friends-icons\4.png" />
+    <Content Include="newfiles\images\friends-icons\5.png" />
+    <Content Include="newfiles\images\friends-icons\6.png" />
+    <Content Include="newfiles\images\friends-icons\add_1.png" />
+    <Content Include="newfiles\images\friends-icons\add_2.png" />
+    <Content Include="newfiles\images\friends-icons\chat_1.png" />
+    <Content Include="newfiles\images\friends-icons\chat_2.png" />
+    <Content Include="newfiles\images\friends-icons\Confirm_1.png" />
+    <Content Include="newfiles\images\friends-icons\Confirm_2.png" />
+    <Content Include="newfiles\images\friends-icons\Delete-Request_1.png" />
+    <Content Include="newfiles\images\friends-icons\Delete-Request_2.png" />
+    <Content Include="newfiles\images\friends-icons\Tools_1.png" />
+    <Content Include="newfiles\images\friends-icons\Tools_2.png" />
+    <Content Include="newfiles\images\friends-icons\Un-friend_1.png" />
+    <Content Include="newfiles\images\friends-icons\Un-friend_2.png" />
+    <Content Include="newfiles\images\friends_icon.png" />
+    <Content Include="newfiles\images\friends_search_icon.png" />
+    <Content Include="newfiles\images\gall1.jpg" />
+    <Content Include="newfiles\images\gall3.jpg" />
+    <Content Include="newfiles\images\gbs.png" />
+    <Content Include="newfiles\images\head_menu_icon.png" />
+    <Content Include="newfiles\images\img.jpg" />
+    <Content Include="newfiles\images\img.png" />
+    <Content Include="newfiles\images\like-icon.png" />
+    <Content Include="newfiles\images\like_ico.png" />
+    <Content Include="newfiles\images\load-small.gif" />
+    <Content Include="newfiles\images\logo.png" />
+    <Content Include="newfiles\images\msgs_icon.png" />
+    <Content Include="newfiles\images\msg_right_bg.png" />
+    <Content Include="newfiles\images\noti_arrow.png" />
+    <Content Include="newfiles\images\plus.png" />
+    <Content Include="newfiles\images\prof_pic.jpg" />
+    <Content Include="newfiles\images\regester_shop.png" />
+    <Content Include="newfiles\images\regester_user.png" />
+    <Content Include="newfiles\images\row_dawn.png" />
+    <Content Include="newfiles\images\row_up.png" />
+    <Content Include="newfiles\images\setting_icon.png" />
+    <Content Include="newfiles\images\setting_icon1.png" />
+    <Content Include="newfiles\images\setting_icon2.png" />
+    <Content Include="newfiles\images\setting_icon3.png" />
+    <Content Include="newfiles\images\setting_icon4.png" />
+    <Content Include="newfiles\images\setting_icon5.png" />
+    <Content Include="newfiles\images\share_ico.png" />
+    <Content Include="newfiles\images\shop-icons\apple.png" />
+    <Content Include="newfiles\images\shop-icons\bags.png" />
+    <Content Include="newfiles\images\shop-icons\books.png" />
+    <Content Include="newfiles\images\shop-icons\cars.png" />
+    <Content Include="newfiles\images\shop-icons\clothes.png" />
+    <Content Include="newfiles\images\shop-icons\decor.png" />
+    <Content Include="newfiles\images\shop-icons\electronics.png" />
+    <Content Include="newfiles\images\shop-icons\kids.png" />
+    <Content Include="newfiles\images\shop-icons\mgwhrat.png" />
+    <Content Include="newfiles\images\shop-icons\mobiles.png" />
+    <Content Include="newfiles\images\shop-icons\shoes.png" />
+    <Content Include="newfiles\images\shop-icons\sports.png" />
+    <Content Include="newfiles\images\shop-icons\tools.png" />
+    <Content Include="newfiles\images\shop-icons\watches.png" />
+    <Content Include="newfiles\images\shop-products\1.jpg" />
+    <Content Include="newfiles\images\shop-products\2.jpg" />
+    <Content Include="newfiles\images\shop-products\3.jpg" />
+    <Content Include="newfiles\images\shop-products\4.jpg" />
+    <Content Include="newfiles\images\shop-products\cart-icon.png" />
+    <Content Include="newfiles\images\shop-products\sale_ico.png" />
+    <Content Include="newfiles\images\shop-settings.png" />
+    <Content Include="newfiles\images\status-add-friend-icon.png" />
+    <Content Include="newfiles\images\status-chat-friend-icon.png" />
+    <Content Include="newfiles\images\status-ip-friend-icon.png" />
+    <Content Include="newfiles\images\store-logos\victoria.jpg" />
+    <Content Include="newfiles\images\tablet\add.png" />
+    <Content Include="newfiles\images\tablet\famo-icon.png" />
+    <Content Include="newfiles\images\tablet\friends-icon.png" />
+    <Content Include="newfiles\images\tablet\friends-page-icon.png" />
+    <Content Include="newfiles\images\tablet\last-news-icon.png" />
+    <Content Include="newfiles\images\tablet\my-page-icon.png" />
+    <Content Include="newfiles\images\tablet\open-menu-down-arrow.png" />
+    <Content Include="newfiles\images\tablet\photos-videos-icon.png" />
+    <Content Include="newfiles\images\tablet\search-icon.png" />
+    <Content Include="newfiles\images\tablet\search-tab.png" />
+    <Content Include="newfiles\images\tablet\stores-products-icon.png" />
+    <Content Include="newfiles\images\tablet\tab-menu.png" />
+    <Content Include="newfiles\images\test.jpg" />
+    <Content Include="newfiles\images\textbox_icon1.png" />
+    <Content Include="newfiles\images\textbox_icon2.png" />
+    <Content Include="newfiles\images\top_header_bg.png" />
+    <Content Include="newfiles\images\truo.png" />
+    <Content Include="newfiles\images\unlike-icon.png" />
+    <Content Include="newfiles\images\unlike_ico.png" />
+    <Content Include="newfiles\images\userphoto.jpg" />
+    <Content Include="newfiles\images\user_img.png" />
+    <Content Include="newfiles\images\video-gallery\1_03.jpg" />
+    <Content Include="newfiles\images\video-gallery\aa11.jpg" />
+    <Content Include="newfiles\images\video-gallery\baby.jpg" />
+    <Content Include="newfiles\images\video-gallery\kid.jpg" />
+    <Content Include="newfiles\images\video-gallery\not-found.png" />
+    <Content Include="newfiles\images\video-gallery\tools.png" />
+    <Content Include="newfiles\images\video-gallery\video-icon.png" />
+    <Content Include="newfiles\images\youtube.png" />
+    <Content Include="newfiles\js\album-option.js" />
+    <Content Include="newfiles\js\expand.js" />
+    <Content Include="newfiles\js\jquery-1.10.2.js" />
+    <Content Include="newfiles\js\jquery-1.10.2.min.js" />
+    <Content Include="newfiles\js\jquery.add_topic.js" />
+    <Content Include="newfiles\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="newfiles\js\jquery.mCustomScrollbar.min.js" />
+    <Content Include="newfiles\js\jquery.mousewheel.min.js" />
+    <Content Include="newfiles\js\masonry.js" />
+    <Content Include="newfiles\js\notification.js" />
+    <Content Include="newfiles\js\photos-option.js" />
+    <Content Include="newfiles\js\respond.min.js" />
+    <Content Include="newfiles\js\fleep.js" />
+    <Content Include="newfiles\js\SettingScript.js" />
+    <Content Include="newfiles\js\showhidden.js" />
+    <Content Include="newfiles\js\toolmenu.js" />
+    <Content Include="newfiles\js\topicmenu.js" />
+    <Content Include="newfiles\js\video-option.js" />
+    <Content Include="newPass.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="ResetPass.aspx" />
+    <Content Include="scripts\Custom\jquery.fileupload.bootstrap.js" />
+    <Content Include="scripts\Custom\jquery.iframe-transport.js" />
+    <Content Include="scripts\Default\application.js" />
+    <Content Include="scripts\Default\jquery.fileupload-ui.js" />
+    <Content Include="scripts\Default\jquery.fileupload.js" />
+    <Content Include="scripts\Default\jquery.iframe-transport.js" />
+    <Content Include="scripts\jquery-1.8.3.min.js" />
+    <Content Include="scripts\jquery.tobrowserwidth.js" />
+    <Content Include="scripts\jquery.watch.js" />
+    <Content Include="scripts\museutils.js" />
+    <Content Include="scripts\pie.js" />
+    <Content Include="scripts\webpro.js" />
+    <Content Include="Sessionsett.aspx" />
+    <Content Include="styles\Custom\style.css" />
+    <Content Include="styles\Default\jquery.fileupload-ui.css" />
+    <Content Include="styles\Default\style.css" />
+    <Content Include="templates\adv-ar.html" />
+    <Content Include="templates\restpass-ar.html" />
+    <Content Include="templates\welcome-ar.html" />
+    <Content Include="thumb.aspx" />
+    <Content Include="userControls\Capatcha.ascx" />
+    <Content Include="userControls\ucShopLogo.ascx" />
+    <Content Include="usrAlbum.aspx" />
+    <Content Include="usrMain.aspx" />
+    <Content Include="usrPage.aspx" />
+    <Content Include="usrProfile.aspx" />
+    <None Include="Messages\.idea\.name" />
+    <None Include="Messages\.idea\Msg Page.iml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NopService\NopService.disco" />
+    <None Include="Web References\PersonalService\FamoPersonalService.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\NopService\NopService.wsdl" />
+    <None Include="Web References\NopService\NopService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NopService\NopService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NopService\NopService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NopService\NopService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NopService\NopService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NopService\OrderError.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NopService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PersonalService\FamoPersonalService.wsdl" />
+    <None Include="Web References\PersonalService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admActivity.aspx.cs">
+      <DependentUpon>admActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admActivity.aspx.designer.cs">
+      <DependentUpon>admActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admAdvDisc.aspx.cs">
+      <DependentUpon>admAdvDisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admAdvDisc.aspx.designer.cs">
+      <DependentUpon>admAdvDisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admAdvPeriod.aspx.cs">
+      <DependentUpon>admAdvPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admAdvPeriod.aspx.designer.cs">
+      <DependentUpon>admAdvPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admAdvPrice.aspx.cs">
+      <DependentUpon>admAdvPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admAdvPrice.aspx.designer.cs">
+      <DependentUpon>admAdvPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admChar.aspx.cs">
+      <DependentUpon>admChar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admChar.aspx.designer.cs">
+      <DependentUpon>admChar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCharGrop.aspx.cs">
+      <DependentUpon>admCharGrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCharGrop.aspx.designer.cs">
+      <DependentUpon>admCharGrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCharGroupShow.aspx.cs">
+      <DependentUpon>admCharGroupShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCharGroupShow.aspx.designer.cs">
+      <DependentUpon>admCharGroupShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCharShow.aspx.cs">
+      <DependentUpon>admCharShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCharShow.aspx.designer.cs">
+      <DependentUpon>admCharShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admChrCloth.aspx.cs">
+      <DependentUpon>admChrCloth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admChrCloth.aspx.designer.cs">
+      <DependentUpon>admChrCloth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admChrClothShow.aspx.cs">
+      <DependentUpon>admChrClothShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admChrClothShow.aspx.designer.cs">
+      <DependentUpon>admChrClothShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admFeedback.aspx.cs">
+      <DependentUpon>admFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admFeedback.aspx.designer.cs">
+      <DependentUpon>admFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admGroups.aspx.cs">
+      <DependentUpon>admGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admGroups.aspx.designer.cs">
+      <DependentUpon>admGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admIndex.aspx.cs">
+      <DependentUpon>admIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admIndex.aspx.designer.cs">
+      <DependentUpon>admIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admIndexShow.aspx.cs">
+      <DependentUpon>admIndexShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admIndexShow.aspx.designer.cs">
+      <DependentUpon>admIndexShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admList.aspx.cs">
+      <DependentUpon>admList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admList.aspx.designer.cs">
+      <DependentUpon>admList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admLogs.aspx.cs">
+      <DependentUpon>admLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admLogs.aspx.designer.cs">
+      <DependentUpon>admLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admMain.aspx.cs">
+      <DependentUpon>admMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admMain.aspx.designer.cs">
+      <DependentUpon>admMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admObjectsGroups.aspx.cs">
+      <DependentUpon>admObjectsGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admObjectsGroups.aspx.designer.cs">
+      <DependentUpon>admObjectsGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admObjectShow.aspx.cs">
+      <DependentUpon>admObjectShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admObjectShow.aspx.designer.cs">
+      <DependentUpon>admObjectShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admOption.aspx.cs">
+      <DependentUpon>admOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admOption.aspx.designer.cs">
+      <DependentUpon>admOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admPermissionadd.aspx.cs">
+      <DependentUpon>admPermissionadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admPermissionadd.aspx.designer.cs">
+      <DependentUpon>admPermissionadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admPermissionShow.aspx.cs">
+      <DependentUpon>admPermissionShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admPermissionShow.aspx.designer.cs">
+      <DependentUpon>admPermissionShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admRoles.aspx.cs">
+      <DependentUpon>admRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admRoles.aspx.designer.cs">
+      <DependentUpon>admRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admScene.aspx.cs">
+      <DependentUpon>admScene.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admScene.aspx.designer.cs">
+      <DependentUpon>admScene.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admSceneShow.aspx.cs">
+      <DependentUpon>admSceneShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admSceneShow.aspx.designer.cs">
+      <DependentUpon>admSceneShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admTask.aspx.cs">
+      <DependentUpon>admTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admTask.aspx.designer.cs">
+      <DependentUpon>admTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admTrigger.aspx.cs">
+      <DependentUpon>admTrigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admTrigger.aspx.designer.cs">
+      <DependentUpon>admTrigger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admTriggerShow.aspx.cs">
+      <DependentUpon>admTriggerShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admTriggerShow.aspx.designer.cs">
+      <DependentUpon>admTriggerShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admUserAdd.aspx.cs">
+      <DependentUpon>admUserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admUserAdd.aspx.designer.cs">
+      <DependentUpon>admUserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admAgree.aspx.cs">
+      <DependentUpon>admAgree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admAgree.aspx.designer.cs">
+      <DependentUpon>admAgree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admLang.aspx.cs">
+      <DependentUpon>admLang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admLang.aspx.designer.cs">
+      <DependentUpon>admLang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admNews.aspx.cs">
+      <DependentUpon>admNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admNews.aspx.designer.cs">
+      <DependentUpon>admNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admUsers.aspx.cs">
+      <DependentUpon>admUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admUsers.aspx.designer.cs">
+      <DependentUpon>admUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgreePage.aspx.cs">
+      <DependentUpon>AgreePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgreePage.aspx.designer.cs">
+      <DependentUpon>AgreePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\ClassMain.cs" />
+    <Compile Include="ashx\hdlNotification.ashx.cs">
+      <DependentUpon>hdlNotification.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\hdlSocial.ashx.cs">
+      <DependentUpon>hdlSocial.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CImage.aspx.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CImage.aspx.designer.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilesStatus.ashx.cs" />
+    <Compile Include="FileTransferHandler.ashx.cs">
+      <DependentUpon>FileTransferHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\hdlProduct.ashx.cs">
+      <DependentUpon>hdlProduct.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCms.aspx.cs">
+      <DependentUpon>LoginCms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginCms.aspx.designer.cs">
+      <DependentUpon>LoginCms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdmn1.Master.cs">
+      <DependentUpon>MasterAdmn1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdmn1.Master.designer.cs">
+      <DependentUpon>MasterAdmn1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdmn2.Master.cs">
+      <DependentUpon>MasterAdmn2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdmn2.Master.designer.cs">
+      <DependentUpon>MasterAdmn2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMain1.Master.cs">
+      <DependentUpon>MasterMain1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterMain1.Master.designer.cs">
+      <DependentUpon>MasterMain1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMain2.Master.cs">
+      <DependentUpon>MasterMain2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterMain2.Master.designer.cs">
+      <DependentUpon>MasterMain2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterShpCms.Master.cs">
+      <DependentUpon>MasterShpCms.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterShpCms.Master.designer.cs">
+      <DependentUpon>MasterShpCms.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterShpCms2.master.cs">
+      <DependentUpon>MasterShpCms2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterShpCms2.master.designer.cs">
+      <DependentUpon>MasterShpCms2.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterShpMain.Master.cs">
+      <DependentUpon>MasterShpMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterShpMain.Master.designer.cs">
+      <DependentUpon>MasterShpMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterUsr.Master.cs">
+      <DependentUpon>MasterUsr.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterUsr.Master.designer.cs">
+      <DependentUpon>MasterUsr.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Methods.aspx.cs">
+      <DependentUpon>Methods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Methods.aspx.designer.cs">
+      <DependentUpon>Methods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msg.aspx.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msg.aspx.designer.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newPass.aspx.cs">
+      <DependentUpon>newPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newPass.aspx.designer.cs">
+      <DependentUpon>newPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPass.aspx.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPass.aspx.designer.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sessionsett.aspx.cs">
+      <DependentUpon>Sessionsett.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sessionsett.aspx.designer.cs">
+      <DependentUpon>Sessionsett.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thumb.aspx.cs">
+      <DependentUpon>thumb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thumb.aspx.designer.cs">
+      <DependentUpon>thumb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thumbnail.ashx.cs">
+      <DependentUpon>Thumbnail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Capatcha.ascx.cs">
+      <DependentUpon>Capatcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\Capatcha.ascx.designer.cs">
+      <DependentUpon>Capatcha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\ucShopLogo.ascx.cs">
+      <DependentUpon>ucShopLogo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\ucShopLogo.ascx.designer.cs">
+      <DependentUpon>ucShopLogo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usrAlbum.aspx.cs">
+      <DependentUpon>usrAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usrAlbum.aspx.designer.cs">
+      <DependentUpon>usrAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usrMain.aspx.cs">
+      <DependentUpon>usrMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usrMain.aspx.designer.cs">
+      <DependentUpon>usrMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usrPage.aspx.cs">
+      <DependentUpon>usrPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usrPage.aspx.designer.cs">
+      <DependentUpon>usrPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usrProfile.aspx.cs">
+      <DependentUpon>usrProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usrProfile.aspx.designer.cs">
+      <DependentUpon>usrProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PersonalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileTransferHandler.ashx" />
+    <Content Include="ashx\hdlSocial.ashx" />
+    <Content Include="ashx\hdlNotification.ashx" />
+    <None Include="fonts\helveticaneueltarabic55roman.eot" />
+    <None Include="fonts\helveticaneueltarabic55roman.svg" />
+    <None Include="fonts\helveticaneueltarabic55roman.ttf" />
+    <None Include="fonts\helveticaneueltarabic55roman.woff" />
+    <Content Include="MasterShpCms.Master" />
+    <Content Include="MasterMain1.Master" />
+    <Content Include="MasterMain2.Master" />
+    <Content Include="MasterAdmn1.Master" />
+    <Content Include="MasterShpMain.Master" />
+    <Content Include="MasterShpCms2.master" />
+    <Content Include="ashx\hdlProduct.ashx" />
+    <None Include="images\shared\nav\Thumbs.db" />
+    <Content Include="Thumbnail.ashx" />
+    <Content Include="MasterUsr.Master" />
+    <Content Include="MasterAdmn2.Master" />
+    <None Include="newfiles\fonts\344604493-DroidKufi-Regular.eot" />
+    <None Include="newfiles\fonts\344604493-DroidKufi-Regular.svg" />
+    <None Include="newfiles\fonts\344604493-DroidKufi-Regular.ttf" />
+    <None Include="newfiles\fonts\344604493-DroidKufi-Regular.woff" />
+    <Content Include="newfiles\fonts\344604493-DroidKufi-Regular.zip" />
+    <None Include="newfiles\images\shop-icons\books.psd" />
+    <None Include="newfont\bold\GE-SS-TWO-BOLD_0.eot" />
+    <None Include="newfont\bold\GE-SS-TWO-BOLD_0.svg" />
+    <None Include="newfont\bold\GE-SS-TWO-BOLD_0.ttf" />
+    <None Include="newfont\bold\GE-SS-TWO-BOLD_0.woff" />
+    <None Include="newfont\light\GE-SS-TWO-LIGHT_0.eot" />
+    <None Include="newfont\light\GE-SS-TWO-LIGHT_0.svg" />
+    <None Include="newfont\light\GE-SS-TWO-LIGHT_0.ttf" />
+    <None Include="newfont\light\GE-SS-TWO-LIGHT_0.woff" />
+    <None Include="newfont\medium\GE-SS-TWO-MEDIUM_0.eot" />
+    <None Include="newfont\medium\GE-SS-TWO-MEDIUM_0.svg" />
+    <None Include="newfont\medium\GE-SS-TWO-MEDIUM_0.ttf" />
+    <None Include="newfont\medium\GE-SS-TWO-MEDIUM_0.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\defaults\4\" />
+    <Folder Include="images\defaults\5\" />
+    <Folder Include="images\defaults\6\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.famocity.com/FamoPersonalService/FamoPersonalService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PersonalService\</RelPath>
+      <UpdateFromURL>http://www.famocity.com/FamoPersonalService/FamoPersonalService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FamoCity_PersonalService_FamoPersonalService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NopService\</RelPath>
+      <UpdateFromURL>http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FamoCity_NopService_NopService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55079</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

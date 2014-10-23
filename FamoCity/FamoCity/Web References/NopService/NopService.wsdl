@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NopService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INopService_GetPaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetPaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteDataSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteDataSet" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteDataSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteNonQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteNonQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteScalar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteScalar" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ExecuteScalar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_DeleteOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrders" />
+  </wsdl:message>
+  <wsdl:message name="INopService_DeleteOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_AddOrderNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderNote" />
+  </wsdl:message>
+  <wsdl:message name="INopService_AddOrderNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateOrderBillingInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderBillingInfo" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateOrderBillingInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderBillingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateOrderShippingInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderShippingInfo" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateOrderShippingInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderShippingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPaid_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPaid" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPaid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPaidWithMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPaidWithMethod" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPaidWithMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPaidWithMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPending_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPending" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentPending_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentPendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentRefund_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentRefund" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrderPaymentRefund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrderPaymentRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrdersStatusCanceled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrdersStatusCanceled" />
+  </wsdl:message>
+  <wsdl:message name="INopService_SetOrdersStatusCanceled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOrdersStatusCanceledResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_RegisterNewCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewCustomer" />
+  </wsdl:message>
+  <wsdl:message name="INopService_RegisterNewCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_LoginCutomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCutomer" />
+  </wsdl:message>
+  <wsdl:message name="INopService_LoginCutomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCutomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateGenericAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGenericAttribute" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateGenericAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGenericAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateGenericAttributeByCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGenericAttributeByCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="INopService_UpdateGenericAttributeByCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGenericAttributeByCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCustomerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCustomerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_RegisterNewVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewVendor" />
+  </wsdl:message>
+  <wsdl:message name="INopService_RegisterNewVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_PasswordRecovery_InputMessage">
+    <wsdl:part name="parameters" element="tns:PasswordRecovery" />
+  </wsdl:message>
+  <wsdl:message name="INopService_PasswordRecovery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PasswordRecoveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetVendorsFollowing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsFollowing" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetVendorsFollowing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsFollowingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetVendorsFollowingSeeMore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsFollowingSeeMore" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetVendorsFollowingSeeMore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsFollowingSeeMoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_getSlugName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSlugName" />
+  </wsdl:message>
+  <wsdl:message name="INopService_getSlugName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSlugNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductVendor" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductVendorSeeMore_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductVendorSeeMore" />
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductVendorSeeMore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductVendorSeeMoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetFollowingProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowingProducts" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetFollowingProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowingProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetStatisticsVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatisticsVendor" />
+  </wsdl:message>
+  <wsdl:message name="INopService_GetStatisticsVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatisticsVendorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INopService">
+    <wsdl:operation name="GetPaymentMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetPaymentMethod" message="tns:INopService_GetPaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetPaymentMethodResponse" message="tns:INopService_GetPaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ExecuteDataSet" message="tns:INopService_ExecuteDataSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ExecuteDataSetResponse" message="tns:INopService_ExecuteDataSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ExecuteNonQuery" message="tns:INopService_ExecuteNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ExecuteNonQueryResponse" message="tns:INopService_ExecuteNonQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ExecuteScalar" message="tns:INopService_ExecuteScalar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ExecuteScalarResponse" message="tns:INopService_ExecuteScalar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/DeleteOrders" message="tns:INopService_DeleteOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/DeleteOrdersResponse" message="tns:INopService_DeleteOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/AddOrderNote" message="tns:INopService_AddOrderNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/AddOrderNoteResponse" message="tns:INopService_AddOrderNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderBillingInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/UpdateOrderBillingInfo" message="tns:INopService_UpdateOrderBillingInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/UpdateOrderBillingInfoResponse" message="tns:INopService_UpdateOrderBillingInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderShippingInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/UpdateOrderShippingInfo" message="tns:INopService_UpdateOrderShippingInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/UpdateOrderShippingInfoResponse" message="tns:INopService_UpdateOrderShippingInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPaid">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPaid" message="tns:INopService_SetOrderPaymentPaid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPaidResponse" message="tns:INopService_SetOrderPaymentPaid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPaidWithMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPaidWithMethod" message="tns:INopService_SetOrderPaymentPaidWithMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPaidWithMethodResponse" message="tns:INopService_SetOrderPaymentPaidWithMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPending">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPending" message="tns:INopService_SetOrderPaymentPending_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentPendingResponse" message="tns:INopService_SetOrderPaymentPending_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentRefund">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentRefund" message="tns:INopService_SetOrderPaymentRefund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/SetOrderPaymentRefundResponse" message="tns:INopService_SetOrderPaymentRefund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrdersStatusCanceled">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/SetOrdersStatusCanceled" message="tns:INopService_SetOrdersStatusCanceled_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/SetOrdersStatusCanceledResponse" message="tns:INopService_SetOrdersStatusCanceled_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/RegisterNewCustomer" message="tns:INopService_RegisterNewCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/RegisterNewCustomerResponse" message="tns:INopService_RegisterNewCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCutomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/LoginCutomer" message="tns:INopService_LoginCutomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/LoginCutomerResponse" message="tns:INopService_LoginCutomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGenericAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/UpdateGenericAttribute" message="tns:INopService_UpdateGenericAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/UpdateGenericAttributeResponse" message="tns:INopService_UpdateGenericAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGenericAttributeByCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/UpdateGenericAttributeByCustomerId" message="tns:INopService_UpdateGenericAttributeByCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/UpdateGenericAttributeByCustomerIdResponse" message="tns:INopService_UpdateGenericAttributeByCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetCustomerData" message="tns:INopService_GetCustomerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetCustomerDataResponse" message="tns:INopService_GetCustomerData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/RegisterNewVendor" message="tns:INopService_RegisterNewVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/RegisterNewVendorResponse" message="tns:INopService_RegisterNewVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PasswordRecovery">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/PasswordRecovery" message="tns:INopService_PasswordRecovery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/PasswordRecoveryResponse" message="tns:INopService_PasswordRecovery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsFollowing">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetVendorsFollowing" message="tns:INopService_GetVendorsFollowing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetVendorsFollowingResponse" message="tns:INopService_GetVendorsFollowing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsFollowingSeeMore">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetVendorsFollowingSeeMore" message="tns:INopService_GetVendorsFollowingSeeMore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetVendorsFollowingSeeMoreResponse" message="tns:INopService_GetVendorsFollowingSeeMore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSlugName">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/getSlugName" message="tns:INopService_getSlugName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/getSlugNameResponse" message="tns:INopService_getSlugName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ProductVendor" message="tns:INopService_ProductVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ProductVendorResponse" message="tns:INopService_ProductVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductVendorSeeMore">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ProductVendorSeeMore" message="tns:INopService_ProductVendorSeeMore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ProductVendorSeeMoreResponse" message="tns:INopService_ProductVendorSeeMore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowingProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetFollowingProducts" message="tns:INopService_GetFollowingProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetFollowingProductsResponse" message="tns:INopService_GetFollowingProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetStatisticsVendor" message="tns:INopService_GetStatisticsVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetStatisticsVendorResponse" message="tns:INopService_GetStatisticsVendor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INopService" type="tns:INopService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPaymentMethod">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetPaymentMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataSet">
+      <soap:operation soapAction="http://tempuri.org/INopService/ExecuteDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/INopService/ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap:operation soapAction="http://tempuri.org/INopService/ExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders">
+      <soap:operation soapAction="http://tempuri.org/INopService/DeleteOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderNote">
+      <soap:operation soapAction="http://tempuri.org/INopService/AddOrderNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderBillingInfo">
+      <soap:operation soapAction="http://tempuri.org/INopService/UpdateOrderBillingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderShippingInfo">
+      <soap:operation soapAction="http://tempuri.org/INopService/UpdateOrderShippingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPaid">
+      <soap:operation soapAction="http://tempuri.org/INopService/SetOrderPaymentPaid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPaidWithMethod">
+      <soap:operation soapAction="http://tempuri.org/INopService/SetOrderPaymentPaidWithMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentPending">
+      <soap:operation soapAction="http://tempuri.org/INopService/SetOrderPaymentPending" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderPaymentRefund">
+      <soap:operation soapAction="http://tempuri.org/INopService/SetOrderPaymentRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrdersStatusCanceled">
+      <soap:operation soapAction="http://tempuri.org/INopService/SetOrdersStatusCanceled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewCustomer">
+      <soap:operation soapAction="http://tempuri.org/INopService/RegisterNewCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCutomer">
+      <soap:operation soapAction="http://tempuri.org/INopService/LoginCutomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGenericAttribute">
+      <soap:operation soapAction="http://tempuri.org/INopService/UpdateGenericAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGenericAttributeByCustomerId">
+      <soap:operation soapAction="http://tempuri.org/INopService/UpdateGenericAttributeByCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewVendor">
+      <soap:operation soapAction="http://tempuri.org/INopService/RegisterNewVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasswordRecovery">
+      <soap:operation soapAction="http://tempuri.org/INopService/PasswordRecovery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsFollowing">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetVendorsFollowing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsFollowingSeeMore">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetVendorsFollowingSeeMore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSlugName">
+      <soap:operation soapAction="http://tempuri.org/INopService/getSlugName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductVendor">
+      <soap:operation soapAction="http://tempuri.org/INopService/ProductVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductVendorSeeMore">
+      <soap:operation soapAction="http://tempuri.org/INopService/ProductVendorSeeMore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowingProducts">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetFollowingProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsVendor">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetStatisticsVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NopService">
+    <wsdl:port name="BasicHttpBinding_INopService" binding="tns:BasicHttpBinding_INopService">
+      <soap:address location="http://www.famocity.com/shop/Plugins/Misc.WebServices/Remote/NopService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

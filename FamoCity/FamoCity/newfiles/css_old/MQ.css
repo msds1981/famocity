@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* phone */
+@import url("phone.css") only screen and (max-width:480px);
+/* tape */
+@import url("tablet.css") only screen and (min-width:481px), only screen and (orientation:landscape) ;
+/* desktop */
+@import url("desktop.css") only screen and (min-width:769px);
+
